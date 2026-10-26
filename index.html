@@ -138,7 +138,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .ccard .pair{display:flex;align-items:center;gap:10px;margin-top:12px}
 .ccard .mo{flex:1;min-width:0}
 .ccard .mo .mlab{font-size:10px;font-weight:800;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;display:block}
-.ccard .mo b{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.3vw,26px);font-weight:600;line-height:1.05;display:block;margin-top:2px;font-variant-numeric:tabular-nums}
+.ccard .mo b{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,1.85vw,25px);font-weight:600;line-height:1.05;display:block;margin-top:2px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .ccard .mo.a b{color:var(--brand)}
 .ccard .mo.b b{color:var(--accent)}
 .ccard .arr{width:20px;height:20px;color:var(--text-faint);flex-shrink:0}
@@ -229,12 +229,49 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .cstack .proj span{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:800;color:var(--c-out);white-space:nowrap}
 .colgrp .bar{width:100%;border-radius:12px 12px 4px 4px;height:0;transition:height 2s var(--ease);position:relative;min-height:3px;z-index:2}
 .colgrp .bar .top{position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:12.5px;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
-.colgrp .bar.inproj .top{top:auto;bottom:8px;color:#1a0f05}
+.colgrp .bar.inproj .top{top:10px;bottom:auto;color:#10140f}
 .colgrp .cap{font-size:13px;font-weight:700;color:var(--text-dim);text-align:center}
 .colgrp .cap small{display:block;font-size:11px;color:var(--text-faint);font-weight:600;margin-top:2px}
 .cols-leg{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:var(--text-dim);font-weight:600}
 .cols-leg span{display:inline-flex;align-items:center;gap:7px}
 .cols-leg i{width:14px;height:10px;border-radius:3px}
+.pj-explain{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:14px 16px;border-radius:12px;background:color-mix(in srgb,var(--c-out) 8%,transparent);border:1px dashed color-mix(in srgb,var(--c-out) 55%,transparent)}
+.pj-explain svg{width:18px;height:18px;color:var(--c-out);flex-shrink:0;margin-top:2px}
+.pj-explain b{color:var(--text);font-weight:800}
+.pj-explain p{font-size:12.5px;color:var(--text-dim);line-height:1.55}
+.pj-explain p+p{margin-top:5px}
+.pj-explain .calc{font-variant-numeric:tabular-nums;color:var(--accent);font-weight:700}
+
+/* EVOLUÇÃO POR CANAL: MINI GRÁFICOS DE LINHA */
+.lm-top{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;margin-bottom:18px}
+.lm-sum{display:flex;gap:8px;flex-wrap:wrap}
+.lm-sum span{font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:999px}
+.lm{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:clamp(10px,1.4vw,14px)}
+.lc{padding:14px 14px 10px;border-radius:14px;background:var(--surface-2);border:1px solid var(--line-soft);transition:border-color .35s var(--ease),transform .35s var(--ease)}
+.lc:hover{border-color:var(--line);transform:translateY(-3px)}
+.lc .lh{display:flex;align-items:center;gap:8px}
+.lc .ls{margin-top:7px;min-height:22px}
+.lc .lh i{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.lc .lh b{font-size:13px;font-weight:800;line-height:1.25}
+.lc .ls .delta{font-size:11px;padding:2px 9px;white-space:nowrap}
+.lc svg{width:100%;height:auto;display:block;margin-top:4px;overflow:visible}
+.lc .lf{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--text-faint);border-top:1px solid var(--line-soft);padding-top:7px;margin-top:2px}
+.lc .lf b{color:var(--text-dim);font-weight:700}
+.lc .lf .pj b{color:var(--c-out)}
+.lg-line{display:inline-block;width:22px;height:0;border-top:3px solid var(--text-dim);border-radius:2px;vertical-align:middle}
+.lg-line.dash{border-top:2px dashed var(--c-out)}
+
+/* CONVERSÃO */
+:root{--c-comp:#5b8fd9;--c-fech:#2fb488}
+.ckpis{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,16px)}
+.ck{padding:clamp(16px,1.9vw,20px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft);transition:transform .4s var(--ease),border-color .4s var(--ease)}
+.ck:hover{transform:translateY(-4px);border-color:var(--line)}
+.ck .l{font-size:12px;color:var(--text-dim);font-weight:600;display:flex;gap:7px;align-items:center}
+.ck .l svg{width:15px;height:15px;color:var(--brand);flex-shrink:0}
+.ck .v{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.6vw,40px);font-weight:600;line-height:1;margin-top:10px;color:var(--accent);font-variant-numeric:tabular-nums}
+.ck .v.g{color:var(--brand)}
+.ck .s{font-size:11.5px;color:var(--text-faint);margin-top:6px}
+.gg .ch.na{color:var(--text-faint);background:var(--track)}
 
 /* EVOLUÇÃO POR CANAL */
 .grouped{display:flex;flex-direction:column;gap:17px}
@@ -281,7 +318,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .reveal.in{opacity:1;transform:none}
 
 /* RESPONSIVO */
-@media(max-width:1000px){.ins{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.ins,.ckpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:860px){
   .grid2{grid-template-columns:1fr}
   .cmp{grid-template-columns:1fr}
@@ -291,7 +328,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
   .theme-btn .lbl{display:none}
   .brand b,.brand span{display:none}
   .ins{grid-template-columns:1fr}
-  .hbar .row{grid-template-columns:96px 1fr;grid-template-areas:'lbl lbl' 'trk val'}
+  .hbar .row{grid-template-columns:1fr auto;grid-template-areas:'lbl lbl' 'trk val';row-gap:6px}
   .hbar .lbl{grid-area:lbl}.hbar .track{grid-area:trk}.hbar .val{grid-area:val;text-align:right}
   .cols{gap:28px}
   .mm-row{grid-template-columns:72px 1fr auto}
@@ -315,6 +352,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
     <a href="#meta">Meta</a>
     <a href="#origens">Por origem</a>
     <a href="#canal">Por canal</a>
+    <a href="#conversao">Conversão</a>
     <a href="#volume">Volume</a>
   </nav>
   <button class="theme-btn" id="themeBtn" aria-label="Alternar tema"><span class="ic"></span><span class="lbl"></span></button>
@@ -350,6 +388,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
     <div class="panel__h"><h3>Faturamento total por mês</h3><span class="rec">com linha de meta</span></div>
     <div class="cols" id="colsMes"></div>
     <div class="cols-leg" id="colsLeg"></div>
+    <div class="pj-explain" id="pjExplain"></div>
   </div>
 </section>
 
@@ -395,10 +434,30 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 <section class="section" id="canal">
   <div class="sec-h reveal"><div class="k">Evolução por canal</div><h2>Cada origem, mês a mês</h2><p id="canalP"></p></div>
   <div class="panel reveal">
-    <div class="monthleg" id="canalLeg"></div>
-    <div class="grouped" id="grouped"></div>
+    <div class="lm-top"><div class="monthleg" id="canalLeg" style="margin:0"></div><div class="lm-sum" id="lmSum"></div></div>
+    <div class="lm" id="lineMulti"></div>
     <div class="obs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span id="canalObs"></span></div>
   </div>
+</section>
+
+<!-- 6b. CONVERSÃO -->
+<section class="section" id="conversao">
+  <div class="sec-h reveal"><div class="k">Comparecimento e fechamento</div><h2 id="convH2"></h2><p id="convP"></p></div>
+  <div class="ckpis reveal" id="convKpis"></div>
+  <div class="grid2 reveal" style="margin-top:clamp(16px,2.2vw,24px)">
+    <div class="panel">
+      <div class="panel__h"><h3>Compareceram e fecharam</h3><span class="rec">por canal</span></div>
+      <div class="panel__s">Quantos leads compareceram à avaliação e quantos fecharam tratamento em cada canal.</div>
+      <div class="monthleg"><span class="ml"><i style="background:var(--c-comp)"></i>Compareceram</span><span class="ml"><i style="background:var(--c-fech)"></i>Fecharam</span></div>
+      <div class="grouped" id="convBars"></div>
+    </div>
+    <div class="panel">
+      <div class="panel__h"><h3>Taxa de conversão</h3><span class="rec">fechamentos ÷ comparecimentos</span></div>
+      <div class="panel__s">De cada 100 pessoas que compareceram, quantas fecharam. Escala de 0 a 100%.</div>
+      <div class="hbar" id="convRate"></div>
+    </div>
+  </div>
+  <div class="obs reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span id="convObs"></span></div>
 </section>
 
 <!-- 7. VOLUME -->
@@ -445,21 +504,26 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 const META_MES=300000, ANO=2026;
 const MESES=[
   {k:'set', nome:'Setembro', abr:'Set', cor:'--c-set', dias:30, apurados:30},
-  {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:16, corte:'16/10'}
+  {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:23, corte:'23/10'}
 ];
 /* Cristiana reúne "Agendamento Cristiana" (setembro) e "Indicação Cristiana" (outubro). */
 const ORIGENS=[
-  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:22462.57,q:6}}},
-  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:13963.00,q:2}}},
-  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:34150.00,q:6}}},
-  {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0}}},
-  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:7900.47,q:4}}},
-  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:0,q:0}}},
-  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:21730.00,q:3}}},
-  {k:'Cristiana',              c:'--o-cristiana', m:{set:{v:17482.60,q:5},  out:{v:13853.31,q:7}}},
-  {k:'Agendamento Andreza',    c:'--o-andreza',   m:{set:{v:2000.00,q:2},   out:{v:12000.00,q:1}}},
+  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:82382.07,q:14}}, cp:{out:30}},
+  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:48950.50,q:5}}, cp:{out:13}},
+  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:44837.00,q:8}}, cp:{out:24}},
+  {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0}}, cp:{out:3}},
+  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:16763.47,q:6}}, cp:{out:1}, semConv:1},
+  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:0,q:0}}, cp:{out:3}},
+  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:21730.00,q:3}}, cp:{out:6}},
+  {k:'Cristiana',              c:'--o-cristiana', m:{set:{v:17482.60,q:5},  out:{v:16263.31,q:9}}},
+  {k:'Agendamento Andreza',    c:'--o-andreza',   m:{set:{v:2000.00,q:2},   out:{v:16800.00,q:3}}},
   {k:'Indicação Doutor Caio',  c:'--o-caio',      m:{set:{v:345.00,q:1},    out:{v:0,q:0}}}
 ];
+
+/* Comparecimentos (planilha de comparecimentos): cp por origem e mês.
+   "Indicação de paciente" = Indicação paciente CRC. semConv = fora da taxa de conversão.
+   Cristiana, Agendamento Andreza e Doutor Caio não têm comparecimento separado. */
+const FDS={out:{n:11,resp:'Verônica Cristina'}}; /* comparecimentos agendados para finais de semana */
 
 /* ==================== DERIVADOS ==================== */
 const M=Object.fromEntries(MESES.map(m=>[m.k,m]));
@@ -506,8 +570,8 @@ function setTheme(t){document.documentElement.setAttribute('data-theme',t);try{l
 themeBtn.addEventListener('click',()=>setTheme(curTheme()==='dark'?'light':'dark'));
 
 /* ==================== ANIMAÇÃO ==================== */
-const ANIM_CONTAINERS='.hbar,.cols,.gauge,.months,.treemap,.grouped,.metamonth';
-const BAR_SEL='.fill,.fl,.mm-fill', COL_SEL='.bar', ARC_SEL='.gauge-arc.val', TM_SEL='.tm-in';
+const ANIM_CONTAINERS='.hbar,.cols,.gauge,.months,.treemap,.grouped,.metamonth,.lm';
+const BAR_SEL='.fill,.fl,.mm-fill', COL_SEL='.bar', ARC_SEL='.gauge-arc.val,.ln', TM_SEL='.tm-in', DOT_SEL='.ldot';
 const seen=new WeakSet();
 function chartInit(el){
   if(sysReduce){chartFinal(el);return;}
@@ -515,6 +579,7 @@ function chartInit(el){
   el.querySelectorAll(COL_SEL).forEach(b=>{b.style.transition='none';b.style.height='0';});
   el.querySelectorAll(ARC_SEL).forEach(p=>{try{const L=p.getTotalLength();p.style.transition='none';p.style.strokeDasharray=L;p.style.strokeDashoffset=L;}catch(e){}});
   el.querySelectorAll(TM_SEL).forEach(t=>{t.style.transition='none';t.style.opacity='0';t.style.transform='scale(.72)';});
+  el.querySelectorAll(DOT_SEL).forEach(d=>{d.style.transition='none';d.style.opacity='0';});
 }
 function chartPlay(el){
   if(sysReduce){chartFinal(el);return;}
@@ -523,7 +588,8 @@ function chartPlay(el){
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
     el.querySelectorAll(BAR_SEL).forEach((b,i)=>{b.style.transition='width 1.7s var(--ease) '+(i*0.06)+'s';b.style.width=b.style.getPropertyValue('--w');});
     el.querySelectorAll(COL_SEL).forEach((b,i)=>{b.style.transition='height 2s var(--ease) '+(i*0.2)+'s';b.style.height=b.style.getPropertyValue('--h');});
-    el.querySelectorAll(ARC_SEL).forEach(p=>{p.style.transition='stroke-dashoffset 2.3s var(--ease) .15s';p.style.strokeDashoffset='0';});
+    el.querySelectorAll(ARC_SEL).forEach((p,i)=>{p.style.transition='stroke-dashoffset '+(p.classList.contains('ln')?'1.6s':'2.3s')+' var(--ease) '+(p.classList.contains('ln')?(.15+i*.05):.15)+'s';p.style.strokeDashoffset='0';});
+    el.querySelectorAll(DOT_SEL).forEach((d,i)=>{d.style.transition='opacity .6s var(--ease) '+(1+i*.03)+'s';d.style.opacity='1';});
     el.querySelectorAll(TM_SEL).forEach((t,i)=>{t.style.transition='opacity 1s var(--ease) '+(i*0.08)+'s,transform 1s var(--ease) '+(i*0.08)+'s,box-shadow .4s var(--ease)';t.style.opacity='1';t.style.transform='scale(1)';});
   }));
 }
@@ -532,6 +598,7 @@ function chartFinal(el){
   el.querySelectorAll(COL_SEL).forEach(b=>{b.style.transition='none';b.style.height=b.style.getPropertyValue('--h');});
   el.querySelectorAll(ARC_SEL).forEach(p=>{p.style.transition='none';try{p.style.strokeDasharray=p.getTotalLength();}catch(e){}p.style.strokeDashoffset='0';});
   el.querySelectorAll(TM_SEL).forEach(t=>{t.style.transition='box-shadow .4s var(--ease)';t.style.opacity='1';t.style.transform='scale(1)';});
+  el.querySelectorAll(DOT_SEL).forEach(d=>{d.style.transition='none';d.style.opacity='1';});
 }
 const chartIO=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){seen.add(en.target);chartPlay(en.target);chartIO.unobserve(en.target);}});},{threshold:.15});
 function setupAnim(){document.querySelectorAll(ANIM_CONTAINERS).forEach(el=>{chartInit(el);chartIO.observe(el);});}
@@ -542,7 +609,7 @@ const revealIO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)
 /* ==================== MOTORES DE GRÁFICO ==================== */
 function hbar(elId,items,opts={}){
   const el=$(elId); if(!el)return;
-  const max=Math.max(...items.map(i=>i.v),1);
+  const max=opts.max||Math.max(...items.map(i=>i.v),1);
   el.innerHTML=items.map(it=>{
     const w=it.v/max*100, col=cssv(it.color)||cssv('--brand');
     const val=opts.valFmt?opts.valFmt(it.v):nf0(it.v);
@@ -593,7 +660,7 @@ function renderTexts(){
   if(ANTER){
     $('compH2').textContent=`${ANTER.nome} frente a ${low(ATUAL.nome)}`;
     $('compP').textContent=`Comparação direta entre os dois últimos meses${isParc(ATUAL)?`. Como ${low(ATUAL.nome)} ainda está em andamento, os cards mostram quanto ele já representa de ${low(ANTER.nome)} e a projeção para o mês completo`:''}.`;
-    $('canalP').textContent=`Faturamento de cada canal de origem mês a mês, lado a lado. Ordenado pelo resultado de ${low(ANTER.nome)}. A etiqueta mostra quanto o canal já fez em ${low(ATUAL.nome)} frente a ${low(ANTER.nome)}.`;
+    $('canalP').textContent=`Faturamento de cada canal de origem mês a mês em gráfico de linha, para enxergar ganho ou perda. Linha subindo indica crescimento; descendo, queda. Ordenado pelo faturamento acumulado.`;
   }
 }
 
@@ -666,8 +733,8 @@ function colsMes(){
   html+=dados.map(d=>{
     const col=d.pj!=null?`linear-gradient(180deg,#f0b24e,#d9792b)`:`linear-gradient(180deg,var(--green-soft),var(--gold))`;
     const tipH=`<b>${d.m.nome}${d.pj!=null?' (parcial)':''}</b><span>${brl(d.v)} · ${pct(d.v/META_MES*100)} da meta${d.pj!=null?`<br>Projeção: ${brl(d.pj)} (${pct(d.pj/META_MES*100)} da meta)`:''}</span>`;
-    const inside=d.pj!=null&&H(d.pj)-H(d.v)<30;
-    const proj=d.pj!=null?`<div class="proj" style="height:${H(d.pj).toFixed(1)}px"><span>Projeção ${milK(d.pj)}</span></div>`:'';
+    const inside=H(d.v)>44;
+    const proj=d.pj!=null?`<div class="proj" style="height:${H(d.pj).toFixed(1)}px" ${tipAttr(`<b>Projeção de ${low(d.m.nome)}</b><span>Estimativa de fechamento mantendo o ritmo atual: ${brl(d.pj)} (${pct(d.pj/META_MES*100)} da meta)</span>`)}><span>Projeção ${milK(d.pj)}</span></div>`:'';
     return `<div class="colgrp"><div class="cstack" style="height:${H(Math.max(d.v,d.pj||0)).toFixed(1)}px">${proj}<div class="bar${inside?' inproj':''}" style="--h:${H(d.v).toFixed(1)}px;background:${col}" ${tipAttr(tipH)}><span class="top">${milK(d.v)}</span></div></div>
       <div class="cap">${d.m.nome}<small>${d.pj!=null?'parcial · ':''}${pct(d.v/META_MES*100)} da meta</small></div></div>`;
   }).join('');
@@ -675,6 +742,13 @@ function colsMes(){
   $('colsLeg').innerHTML=`<span><i style="background:linear-gradient(90deg,var(--green-soft),var(--gold))"></i>Mês fechado</span>`+
     (MESES.some(isParc)?`<span><i style="background:linear-gradient(90deg,#f0b24e,#d9792b)"></i>Mês em andamento (apurado)</span><span><i style="border:2px dashed var(--c-out);background:transparent"></i>Projeção linear do mês</span>`:'')+
     `<span><i style="border-top:2px dashed var(--accent);height:0;border-radius:0"></i>Meta mensal</span>`;
+  const pe=$('pjExplain'), mp=MESES.find(isParc);
+  if(!mp){pe.style.display='none';return;}
+  const tv=totV(mp.k),med=tv/mp.apurados,pj=projV(mp.k),pm=pj/META_MES*100;
+  pe.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><div>
+    <p><b>O que é a projeção (contorno tracejado laranja):</b> é uma estimativa de quanto ${low(mp.nome)} vai fechar se a clínica mantiver, até o fim do mês, o mesmo ritmo dos dias já apurados. A barra cheia é o que já entrou; o contorno mostra aonde o mês deve chegar nesse ritmo.</p>
+    <p>Cálculo: <span class="calc">${brl(tv)} ÷ ${mp.apurados} dias = ${brl(med)} por dia × ${mp.dias} dias = ${brl(pj)}</span>, o que equivale a ${pct(pm)} da meta.</p>
+    <p>Não é um valor garantido: muda a cada atualização semanal e sobe se o ritmo de fechamentos acelerar.${pm<100?' Hoje ela fica abaixo da linha da meta, ou seja, para bater os R$ 300 mil o ritmo precisa aumentar.':' Hoje ela passa da linha da meta, ou seja, mantido o ritmo, a meta será batida.'}</p></div>`;
 }
 function gauge(){
   const el=$('gauge'), mk=sel.meta, pm=totV(mk)/META_MES*100, p=isParc(M[mk]);
@@ -750,24 +824,68 @@ function renderOrigem(){
   hbar('rankFat',data.map(o=>({k:o.k,v:vOf(o,mk),color:o.c})),{valFmt:brl,extraFmt:it=>` <small>${pct(it.v/tot*100)}</small>`,tipFmt:it=>brl(it.v)+' · '+pct(it.v/tot*100)+' do mês'});
   treemap('treeFat','treeLeg',data.map(o=>({k:o.k,v:vOf(o,mk),q:qOf(o,mk),c:o.c})));
 }
-function grouped(){
-  const el=$('grouped');
-  const max=Math.max(...ORIGENS.flatMap(o=>MESES.map(m=>vOf(o,m.k))),1);
-  const ord=ANTER?ANTER.k:ATUAL.k;
-  const data=[...ORIGENS].sort((a,b)=>vOf(b,ord)-vOf(a,ord));
+const kfmt=v=>v>=1000?'R$ '+(v/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+' mil':'R$ '+nf0(v);
+function lineMulti(){
+  const el=$('lineMulti'), n=MESES.length, P=ANTER?ANTER.k:null, C=ATUAL.k, parc=isParc(ATUAL);
+  const ord=P||C;
+  const data=[...ORIGENS].sort((a,b)=>(vOf(b,ord)+vOf(b,C))-(vOf(a,ord)+vOf(a,C)));
+  const W=300,H=160,pl=16,pr=16,pt=28,pb=26,iw=W-pl-pr,ih=H-pt-pb;
+  const X=i=>n===1?W/2:pl+iw*(n===2?(i?0.84:0.16):i/(n-1));
+  const fator=parc?ATUAL.dias/ATUAL.apurados:1;
+  let up=0,dn=0,rt=0;
   el.innerHTML=data.map(o=>{
-    let ch='';
-    if(ANTER){const a=vOf(o,ANTER.k),b=vOf(o,ATUAL.k);
-      if(a>0){const r=b/a*100;const cls=r>=100?'up':(isParc(ATUAL)?'flat':'down');ch=`<span class="ch delta ${cls}">${isParc(ATUAL)?pct(r,0)+' de '+ANTER.abr.toLowerCase():(r>=100?'▲ ':'▼ ')+pct(Math.abs(r-100))}</span>`;}
-      else if(b>0)ch=`<span class="ch delta up">novo em ${ATUAL.abr.toLowerCase()}</span>`;}
-    const rows=MESES.map(m=>{const v=vOf(o,m.k);
-      return `<div class="g1"><span class="mn">${m.abr}</span><div class="tk"><div class="fl" style="--w:${(v/max*100).toFixed(1)}%;background:${cssv(m.cor)}" ${tipAttr(`<b>${m.nome} · ${o.k}</b><span>${brl(v)} · ${qOf(o,m.k)} ${qOf(o,m.k)===1?'lead':'leads'}</span>`)}></div></div><span class="vv">${brl(v)}</span></div>`;}).join('');
-    return `<div class="gg"><div class="gh"><i style="background:${cssv(o.c)}"></i>${o.k}${o.hl?' ★':''}${ch}</div><div class="pair">${rows}</div></div>`;
+    const col=cssv(o.c), vals=MESES.map(m=>vOf(o,m.k));
+    const pj=parc?vOf(o,C)*fator:null;
+    const top=Math.max(...vals,pj||0,1)*1.14;
+    const Y=v=>pt+ih-(v/top)*ih;
+    const pts=vals.map((v,i)=>[X(i),Y(v)]);
+    const line='M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L');
+    const area=line+` L${pts[n-1][0].toFixed(1)} ${(pt+ih).toFixed(1)} L${pts[0][0].toFixed(1)} ${(pt+ih).toFixed(1)} Z`;
+    const gid='lg'+ORIGENS.indexOf(o);
+    /* status */
+    let chip='';
+    if(P){const a=vOf(o,P),b=vOf(o,C);
+      if(a===0&&b>0){chip='<span class="delta up">▲ novo</span>';up++;}
+      else if(a===0&&b===0){chip='<span class="delta flat" style="color:var(--text-faint);background:var(--track)">sem fechamento</span>';}
+      else if(b>=a){chip=`<span class="delta up">▲ ${pct((b/a-1)*100)} acima de ${P==='set'?'set.':P}</span>`;up++;}
+      else if(parc&&b===0){chip=`<span class="delta flat" style="color:var(--text-dim);background:var(--track)">ainda sem fechamento</span>`;dn++;}
+      else if(parc&&pj>=a){chip=`<span class="delta flat">no ritmo de superar ${ANTER.abr.toLowerCase()}.</span>`;rt++;}
+      else{chip=`<span class="delta down">▼ ${pct((1-(parc?pj:b)/a)*100)} ${parc?'na projeção':'abaixo'}</span>`;dn++;}
+    }
+    /* projeção */
+    let pjs='';
+    if(parc&&n>1){
+      const pp=[X(n-1),Y(pj)], pv=pts[n-2];
+      pjs=`<path d="M${pv[0].toFixed(1)} ${pv[1].toFixed(1)} L${pp[0].toFixed(1)} ${pp[1].toFixed(1)}" fill="none" stroke="${cssv('--c-out')}" stroke-width="1.8" stroke-dasharray="4 4" opacity=".9" class="ldot"/>
+        <circle class="ldot" cx="${pp[0].toFixed(1)}" cy="${pp[1].toFixed(1)}" r="4" fill="${cssv('--surface-2')}" stroke="${cssv('--c-out')}" stroke-width="1.8" ${tipAttr(`<b>${o.k} · projeção de ${low(ATUAL.nome)}</b><span>${brl(pj)} mantendo o ritmo atual</span>`)}/>`;
+    }
+    /* rótulos dos pontos, evitando sobreposição com a projeção */
+    const labs=vals.map((v,i)=>{
+      let y=pts[i][1]-10, anchor=i===0?'start':(i===n-1?'end':'middle'), x=pts[i][0]+(i===0?-6:(i===n-1?6:0));
+      if(parc&&i===n-1&&pj>v&&Y(v)-Y(pj)<26&&pts[i][1]+19<pt+ih-2)y=pts[i][1]+19;
+      return `<text class="ldot" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${anchor}" fill="${cssv('--text')}" font-size="11.5" font-weight="800" font-family="Manrope,system-ui,sans-serif">${kfmt(v)}</text>`;
+    }).join('');
+    let pjl='';
+    if(parc){const pp=[X(n-1),Y(pj)];pjl=`<text class="ldot" x="${(pp[0]+6).toFixed(1)}" y="${(pp[1]-9).toFixed(1)}" text-anchor="end" fill="${cssv('--c-out')}" font-size="10" font-weight="800" font-family="Manrope,system-ui,sans-serif">proj. ${kfmt(pj)}</text>`;
+      pjl='';}
+    const xl=MESES.map((m,i)=>`<text x="${X(i).toFixed(1)}" y="${H-6}" text-anchor="${i===0&&n===2?'start':(i===n-1&&n===2?'end':'middle')}" dx="${i===0&&n===2?-6:(i===n-1&&n===2?6:0)}" fill="${cssv('--text-faint')}" font-size="10.5" font-weight="700" font-family="Manrope,system-ui,sans-serif">${m.abr}${isParc(m)?' (parc.)':''}</text>`).join('');
+    const dots=pts.map((p,i)=>`<circle class="ldot" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4.5" fill="${col}" stroke="${cssv('--surface-2')}" stroke-width="2" ${tipAttr(`<b>${o.k} · ${MESES[i].nome}${isParc(MESES[i])?' (parcial)':''}</b><span>${brl(vals[i])} · ${qOf(o,MESES[i].k)} ${qOf(o,MESES[i].k)===1?'lead':'leads'}</span>`)}/>`).join('');
+    const svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.k}: ${MESES.map((m,i)=>m.nome+' '+brl(vals[i])).join(', ')}">
+      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".28"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
+      <line x1="${pl}" y1="${pt+ih}" x2="${W-pr}" y2="${pt+ih}" stroke="${cssv('--line-soft')}" stroke-width="1"/>
+      <path class="ldot" d="${area}" fill="url(#${gid})"/>
+      ${pjs}
+      <path class="ln" d="${line}" fill="none" stroke="${col}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      ${dots}${labs}${pjl}${xl}</svg>`;
+    const foot=parc?`<div class="lf"><span>${ATUAL.nome}: <b>${qOf(o,C)} ${qOf(o,C)===1?'lead':'leads'}</b></span><span class="pj">Projeção: <b>${kfmt(pj)}</b></span></div>`
+                   :`<div class="lf"><span>${ATUAL.nome}: <b>${qOf(o,C)} ${qOf(o,C)===1?'lead':'leads'}</b></span><span>${ANTER?ANTER.nome+': <b>'+qOf(o,P)+'</b>':''}</span></div>`;
+    return `<div class="lc"><div class="lh"><i style="background:${col}"></i><b>${o.k}${o.hl?' ★':''}</b></div><div class="ls">${chip}</div>${svg}${foot}</div>`;
   }).join('');
   bindTips(el);
-  $('canalLeg').innerHTML=MESES.map(m=>`<span class="ml"><i style="background:${cssv(m.cor)}"></i>${m.nome}${isParc(m)?' (parcial)':''}</span>`).join('');
-  const sem=ORIGENS.filter(o=>vOf(o,ATUAL.k)===0).map(o=>o.k);
-  $('canalObs').textContent=`Canais sem fechamento no mês aparecem com R$ 0,00.${sem.length?` Em ${low(ATUAL.nome)}, ainda sem fechamento: ${joinPt(sem)}.`:''} Cristiana reúne Agendamento Cristiana (setembro) e Indicação Cristiana (outubro).`;
+  $('canalLeg').innerHTML=`<span class="ml"><span class="lg-line" style="border-color:var(--text-dim)"></span>Realizado (cor do canal)</span>`+(parc?`<span class="ml"><span class="lg-line dash"></span>Projeção de ${low(ATUAL.nome)}</span>`:'');
+  $('lmSum').innerHTML=ANTER?`<span class="delta up">${up} em alta</span>${rt?`<span class="delta flat">${rt} no ritmo de superar</span>`:''}<span class="delta down">${dn} abaixo de ${low(ANTER.nome)}</span>`:'';
+  const sem=ORIGENS.filter(o=>vOf(o,C)===0).map(o=>o.k);
+  $('canalObs').textContent=`Cada mini gráfico tem escala própria, começando em zero, para que todos os canais fiquem visíveis; compare valores pelos rótulos. A etiqueta compara ${low(ATUAL.nome)} com ${ANTER?low(ANTER.nome):'o mês anterior'}${parc?': canais ainda abaixo são avaliados pela projeção do mês':''}.${sem.length?` Sem fechamento em ${low(ATUAL.nome)}: ${joinPt(sem)}.`:''} Cristiana reúne Agendamento Cristiana (setembro) e Indicação Cristiana (outubro).`;
 }
 function renderVolume(){
   const mk=sel.volume,m=M[mk],tq=totQ(mk),tv=totV(mk);
@@ -779,8 +897,44 @@ function renderVolume(){
   $('volObs').textContent=`Ticket médio geral de ${low(m.nome)}${isParc(m)?' (parcial)':''}: ${brl(tq?tv/tq:0)}. Origens com poucos leads de alto valor puxam o ticket para cima.`;
 }
 
+function renderConv(){
+  const sec=$('conversao');
+  const mm=[...MESES].reverse().find(m=>ORIGENS.some(o=>o.cp&&o.cp[m.k]!=null));
+  if(!mm){sec.style.display='none';return;}
+  const k=mm.k, track=ORIGENS.filter(o=>o.cp&&o.cp[k]!=null);
+  const conv=track.filter(o=>!o.semConv);
+  const totC=track.reduce((a,o)=>a+o.cp[k],0), cC=conv.reduce((a,o)=>a+o.cp[k],0), fC=conv.reduce((a,o)=>a+qOf(o,k),0);
+  const tx=cC?fC/cC*100:0, fds=FDS[k];
+  $('convH2').textContent=`${mm.nome}: quem compareceu e quem fechou`;
+  $('convP').textContent=`Comparecimentos de ${low(mm.nome)}${isParc(mm)?` (parcial, até ${mm.corte})`:''} cruzados com os fechamentos do mesmo mês, por canal de origem.`;
+  const I={c:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    f:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>',
+    t:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 5L5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>',
+    w:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'};
+  const ks=[
+    {i:I.c,l:'Comparecimentos',v:nf0(totC),s:`em ${track.length} canais de origem`},
+    {i:I.f,l:'Fecharam',v:nf0(fC),g:1,s:`de ${nf0(cC)} comparecimentos nos canais acompanhados`},
+    {i:I.t,l:'Taxa de conversão',v:pct(tx),g:1,s:'fechamentos ÷ comparecimentos'}
+  ];
+  if(fds)ks.push({i:I.w,l:'Finais de semana',v:nf0(fds.n),s:`comparecimentos agendados por ${fds.resp}`});
+  $('convKpis').innerHTML=ks.map(x=>`<div class="ck"><div class="l">${x.i}${x.l}</div><div class="v${x.g?' g':''}">${x.v}</div><div class="s">${x.s}</div></div>`).join('');
+  const ord=[...track].sort((a,b)=>b.cp[k]-a.cp[k]||qOf(b,k)-qOf(a,k));
+  const max=Math.max(...track.map(o=>Math.max(o.cp[k],qOf(o,k))),1);
+  $('convBars').innerHTML=ord.map(o=>{
+    const c=o.cp[k],q=qOf(o,k);
+    const ch=o.semConv?'<span class="ch delta na">fora da taxa</span>':`<span class="ch delta ${q/c>=tx/100?'up':'flat'}">${pct(c?q/c*100:0)} de conversão</span>`;
+    const row=(lab,v,col,t)=>`<div class="g1"><span class="mn">${lab}</span><div class="tk"><div class="fl" style="--w:${(v/max*100).toFixed(1)}%;background:var(${col})" ${tipAttr(`<b>${o.k}</b><span>${t}</span>`)}></div></div><span class="vv">${nf0(v)}</span></div>`;
+    return `<div class="gg"><div class="gh"><i style="background:${cssv(o.c)}"></i>${o.k}${ch}</div><div class="pair">${row('Comp.',c,'--c-comp',nf0(c)+' compareceram')}${row('Fech.',q,'--c-fech',nf0(q)+(q===1?' fechou':' fecharam')+' · '+brl(vOf(o,k)))}</div></div>`;
+  }).join('');
+  bindTips($('convBars'));
+  const rt=conv.filter(o=>o.cp[k]>0).map(o=>({k:o.k,v:qOf(o,k)/o.cp[k]*100,color:o.c,c:o.cp[k],q:qOf(o,k)})).sort((a,b)=>b.v-a.v);
+  hbar('convRate',rt,{max:100,valFmt:v=>pct(v),extraFmt:it=>` <small>${it.q}/${it.c}</small>`,tipFmt:it=>`${it.q} de ${it.c} comparecimentos fecharam (${pct(it.v)})`});
+  const fora=track.filter(o=>o.semConv).map(o=>o.k), semCp=ORIGENS.filter(o=>!(o.cp&&o.cp[k]!=null)&&qOf(o,k)>0).map(o=>o.k);
+  $('convObs').textContent=`Conversão = fechamentos do mês ÷ comparecimentos do mês no mesmo canal. Parte dos fechamentos vem de pacientes que compareceram em meses anteriores, então a taxa é uma aproximação. ${fora.length?joinPt(fora)+' fica fora da taxa, porque reúne principalmente pacientes que já estavam em tratamento e ampliaram o plano; o único comparecimento registrado foi da paciente Inúbia Melo Silva, que chegou pesquisando por IA. ':''}${semCp.length?joinPt(semCp)+' não têm comparecimentos separados na planilha. ':''}"Indicação de paciente" da planilha corresponde a Indicação paciente CRC.`;
+}
+
 /* ==================== RENDER GERAL + ABAS ==================== */
-function renderAll(){renderTexts();renderMonths();renderInsights();renderComp();colsMes();renderGaugeBlock();metaMonth();renderRitmo();renderOrigem();grouped();renderVolume();}
+function renderAll(){renderTexts();renderMonths();renderInsights();renderComp();colsMes();renderGaugeBlock();metaMonth();renderRitmo();renderOrigem();lineMulti();renderConv();renderVolume();}
 function buildTabs(){
   document.querySelectorAll('[data-tabgroup]').forEach(g=>{
     const grp=g.dataset.tabgroup;
