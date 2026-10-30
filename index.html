@@ -504,17 +504,17 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 const META_MES=300000, ANO=2026;
 const MESES=[
   {k:'set', nome:'Setembro', abr:'Set', cor:'--c-set', dias:30, apurados:30},
-  {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:23, corte:'23/10'}
+  {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:31, corte:'31/10'}
 ];
 /* Cristiana reúne "Agendamento Cristiana" (setembro) e "Indicação Cristiana" (outubro). */
 const ORIGENS=[
-  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:82382.07,q:14}}, cp:{out:30}},
-  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:48950.50,q:5}}, cp:{out:13}},
-  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:44837.00,q:8}}, cp:{out:24}},
-  {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0}}, cp:{out:3}},
-  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:16763.47,q:6}}, cp:{out:1}, semConv:1},
-  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:0,q:0}}, cp:{out:3}},
-  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:21730.00,q:3}}, cp:{out:6}},
+  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}}, cp:{out:40}},
+  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9}}, cp:{out:18}},
+  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10}}, cp:{out:34}},
+  {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0}}, cp:{out:5}},
+  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10}}, cp:{out:1}, semConv:1},
+  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1}}, cp:{out:6}},
+  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:23475.70,q:4}}, cp:{out:6}},
   {k:'Cristiana',              c:'--o-cristiana', m:{set:{v:17482.60,q:5},  out:{v:16263.31,q:9}}},
   {k:'Agendamento Andreza',    c:'--o-andreza',   m:{set:{v:2000.00,q:2},   out:{v:16800.00,q:3}}},
   {k:'Indicação Doutor Caio',  c:'--o-caio',      m:{set:{v:345.00,q:1},    out:{v:0,q:0}}}
@@ -523,7 +523,7 @@ const ORIGENS=[
 /* Comparecimentos (planilha de comparecimentos): cp por origem e mês.
    "Indicação de paciente" = Indicação paciente CRC. semConv = fora da taxa de conversão.
    Cristiana, Agendamento Andreza e Doutor Caio não têm comparecimento separado. */
-const FDS={out:{n:11,resp:'Verônica Cristina'}}; /* comparecimentos agendados para finais de semana */
+const FDS={out:{n:19,resp:'Verônica Cristina'}}; /* comparecimentos agendados para finais de semana */
 
 /* ==================== DERIVADOS ==================== */
 const M=Object.fromEntries(MESES.map(m=>[m.k,m]));
@@ -717,7 +717,7 @@ function renderComp(){
   el.innerHTML=mets.map(m=>{
     let chip;
     if(p&&m.l!=='Ticket médio')chip=`<span class="delta flat">${pct(m.r)} de ${low(ANTER.nome)}</span><span class="cap">mês em andamento</span>`;
-    else{const d=m.r-100,up=d>=0;chip=`<span class="delta ${up?'up':'down'}">${up?'▲':'▼'} ${pct(Math.abs(d))}</span><span class="cap">variação frente a ${low(ANTER.nome)}</span>`;}
+    else{const d=m.r-100,up=d>=0;chip=Math.abs(d)<0.05?`<span class="delta flat">= estável</span><span class="cap">mesmo resultado de ${low(ANTER.nome)}</span>`:`<span class="delta ${up?'up':'down'}">${up?'▲':'▼'} ${pct(Math.abs(d))}</span><span class="cap">variação frente a ${low(ANTER.nome)}</span>`;}
     return `<div class="ccard"><div class="cl">${m.l}</div>
       <div class="pair"><div class="mo a"><span class="mlab">${ANTER.nome}</span><b>${m.s}</b></div>${seta}<div class="mo b"><span class="mlab">${ATUAL.nome}${p?' · parcial':''}</span><b>${m.o}</b></div></div>
       ${m.pj?`<div class="pjl">Projeção do mês: <b>${m.pj.t}</b> (${pct(m.pj.r)} de ${low(ANTER.nome)})</div>`:''}
@@ -799,7 +799,23 @@ function metaMonth(){
 }
 function renderRitmo(){
   const box=$('ritmoBox'), m=ATUAL;
-  if(!isParc(m)){box.style.display='none';return;}
+  if(!isParc(m)){
+    const tv=totV(m.k),D=m.dias,media=tv/D,nec=META_MES/D,mx=Math.max(media,nec),dif=(media/nec-1)*100;
+    box.style.display='';
+    box.innerHTML=`<h4>Fechamento de ${low(m.nome)} <small>mês completo, ${D} dias</small></h4>
+      <div class="rgrid">
+        <div class="rst"><div class="l">Faturamento do mês</div><div class="v g">${brl(tv)}</div><div class="s">${pct(tv/META_MES*100)} da meta</div></div>
+        <div class="rst"><div class="l">${tv>=META_MES?'Superávit':'Faltou para a meta'}</div><div class="v">${brl(Math.abs(tv-META_MES))}</div><div class="s">${tv>=META_MES?'acima':'abaixo'} dos R$ 300 mil</div></div>
+        <div class="rst"><div class="l">Média diária realizada</div><div class="v g">${brl(media)}</div><div class="s">por dia corrido</div></div>
+        <div class="rst"><div class="l">Média necessária</div><div class="v">${brl(nec)}</div><div class="s">por dia, para a meta</div></div>
+      </div>
+      <div class="metamonth rbars">
+        <div class="mm-row"><div class="lbl">Realizado</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(media/mx*100).toFixed(1)}%;background:${cssv(m.cor)}"></div></div></div><div class="mm-val">${milK1(media)}/dia</div></div>
+        <div class="mm-row"><div class="lbl">Necessário</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(nec/mx*100).toFixed(1)}%;background:${cssv('--gold')}"></div></div></div><div class="mm-val">${milK1(nec)}/dia</div></div>
+      </div>
+      <div class="rmsg">${dif>=0?`${m.nome} fechou com média diária <b>${pct(dif)} acima</b> da necessária para a meta.`:`${m.nome} fechou com média diária <b>${pct(-dif)} abaixo</b> da necessária para a meta.`}</div>`;
+    return;
+  }
   const tv=totV(m.k),d=m.apurados,D=m.dias,rest=D-d,media=tv/d,falta=Math.max(0,META_MES-tv),nec=rest>0?falta/rest:0,proj=projV(m.k);
   const mx=Math.max(media,nec);
   const aum=nec>media?(nec/media-1)*100:0;
@@ -848,6 +864,7 @@ function lineMulti(){
       if(a===0&&b>0){chip='<span class="delta up">▲ novo</span>';up++;}
       else if(a===0&&b===0){chip='<span class="delta flat" style="color:var(--text-faint);background:var(--track)">sem fechamento</span>';}
       else if(b>=a){chip=`<span class="delta up">▲ ${pct((b/a-1)*100)} acima de ${P==='set'?'set.':P}</span>`;up++;}
+      else if(!parc&&b===0){chip=`<span class="delta down">▼ sem fechamento no mês</span>`;dn++;}
       else if(parc&&b===0){chip=`<span class="delta flat" style="color:var(--text-dim);background:var(--track)">ainda sem fechamento</span>`;dn++;}
       else if(parc&&pj>=a){chip=`<span class="delta flat">no ritmo de superar ${ANTER.abr.toLowerCase()}.</span>`;rt++;}
       else{chip=`<span class="delta down">▼ ${pct((1-(parc?pj:b)/a)*100)} ${parc?'na projeção':'abaixo'}</span>`;dn++;}
