@@ -101,51 +101,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .tabs button{font-family:inherit;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;border:none;background:transparent;color:var(--text-dim);cursor:pointer;transition:background .3s,color .3s}
 .tabs button[aria-selected="true"]{background:var(--brand-strong);color:#fff}
 
-/* CARDS DE MÊS */
-.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(12px,1.8vw,18px)}
-.mcard{padding:clamp(16px,2vw,24px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft);transition:transform .4s var(--ease),border-color .4s var(--ease),box-shadow .4s var(--ease)}
-.mcard:hover{transform:translateY(-4px);border-color:var(--line);box-shadow:var(--shadow)}
-.mcard .mh{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.mcard .mn{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600}
-.st{font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:999px;white-space:nowrap}
-.st.fech{background:var(--track);color:var(--text-dim)}
-.st.ok{background:color-mix(in srgb,var(--pos) 16%,transparent);color:var(--pos)}
-.st.parc{background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
-.mcard .big{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;color:var(--accent);line-height:1;margin:14px 0 2px}
-.mcard .rows{display:flex;flex-direction:column;gap:8px;margin-top:14px}
-.mcard .rw{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--text-dim)}
-.mcard .rw b{color:var(--text);font-weight:800;font-variant-numeric:tabular-nums;text-align:right}
-.mcard .rw.pj b{color:var(--accent)}
-.mcard .metabar{margin-top:14px;height:9px;border-radius:5px;background:var(--track);overflow:hidden}
-.mcard .metabar .fl{height:100%;border-radius:5px;width:0;transition:width 1.7s var(--ease);background:linear-gradient(90deg,var(--green),var(--gold))}
-.mcard .cap{font-size:10.5px;color:var(--text-faint);margin-top:6px}
-
-/* DESTAQUES */
-.ins{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,16px)}
-.icard{position:relative;overflow:hidden;padding:clamp(16px,1.9vw,20px) clamp(16px,1.9vw,20px) clamp(16px,1.9vw,20px) 22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft);transition:transform .4s var(--ease),border-color .4s var(--ease)}
-.icard:hover{transform:translateY(-4px);border-color:var(--line)}
-.icard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--bar,var(--brand))}
-.icard .ik{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:flex;gap:7px;align-items:center}
-.icard .ik svg{width:14px;height:14px;flex-shrink:0}
-.icard .iv{font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.4vw,27px);font-weight:600;margin-top:10px;line-height:1.1}
-.icard .id{font-size:12px;color:var(--text-dim);margin-top:7px;line-height:1.45}
-
-/* COMPARATIVO */
-.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,18px)}
-.ccard{padding:clamp(16px,2vw,22px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft);transition:transform .4s var(--ease),border-color .4s var(--ease),box-shadow .4s var(--ease)}
-.ccard:hover{transform:translateY(-4px);border-color:var(--line);box-shadow:var(--shadow)}
-.ccard .cl{font-size:12px;font-weight:700;color:var(--text-dim);letter-spacing:.02em}
-.ccard .pair{display:flex;align-items:center;gap:10px;margin-top:12px}
-.ccard .mo{flex:1;min-width:0}
-.ccard .mo .mlab{font-size:10px;font-weight:800;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;display:block}
-.ccard .mo b{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,1.85vw,25px);font-weight:600;line-height:1.05;display:block;margin-top:2px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.ccard .mo.a b{color:var(--brand)}
-.ccard .mo.b b{color:var(--accent)}
-.ccard .arr{width:20px;height:20px;color:var(--text-faint);flex-shrink:0}
-.ccard .dl{display:flex;align-items:center;gap:9px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line-soft);flex-wrap:wrap}
-.ccard .dl .cap{font-size:11px;color:var(--text-faint)}
-.ccard .pjl{font-size:11.5px;color:var(--text-dim);margin-top:9px}
-.ccard .pjl b{color:var(--accent);font-weight:800}
+/* VARIAÇÃO */
 .delta{display:inline-flex;align-items:center;gap:3px;font-weight:800;font-size:12px;padding:3px 9px;border-radius:999px}
 .delta.up{color:var(--pos);background:color-mix(in srgb,var(--pos) 15%,transparent)}
 .delta.down{color:var(--neg);background:color-mix(in srgb,var(--neg) 15%,transparent)}
@@ -205,24 +161,10 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .hbar .val{font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
 .hbar .val small{color:var(--text-faint);font-weight:600;margin-left:5px}
 
-/* TREEMAP */
-.treemap{position:relative;width:100%;aspect-ratio:1000/470;border-radius:12px;overflow:hidden;background:var(--track)}
-.tm-cell{position:absolute;padding:3px;transition:transform .45s var(--ease),filter .45s var(--ease);cursor:default}
-.tm-in{width:100%;height:100%;border-radius:8px;background:var(--col);display:flex;flex-direction:column;justify-content:center;padding:7px 10px;overflow:hidden;position:relative;transform-origin:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);transition:box-shadow .4s var(--ease)}
-.tm-cell .nm{font-size:12px;font-weight:800;line-height:1.1;color:#0a1a12;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.tm-cell .pc{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:#0a1a12;line-height:1;margin-top:3px}
-.tm-cell .vv{font-size:10px;font-weight:700;color:rgba(10,26,18,.72);margin-top:2px}
-.tm-cell:hover,.tm-cell:focus-visible{transform:scale(1.045);z-index:6;filter:brightness(1.07) saturate(1.05);outline:none}
-.tm-cell:hover .tm-in,.tm-cell:focus-visible .tm-in{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4),0 16px 34px -12px rgba(0,0,0,.65)}
-.tm-leg{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:16px}
-.tm-leg .c{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--text-dim);font-weight:600}
-.tm-leg .c i{width:11px;height:11px;border-radius:3px;flex-shrink:0}
-.tm-leg .c b{color:var(--text);font-weight:800;font-variant-numeric:tabular-nums}
-
 /* COLUNAS (com projeção do mês parcial) */
 .cols{display:flex;align-items:flex-end;justify-content:center;gap:clamp(30px,9vw,90px);height:340px;padding:34px 10px 0;position:relative}
 .cols .metaline{position:absolute;left:10px;right:10px;border-top:2px dashed var(--accent);opacity:.75;z-index:1}
-.cols .metaline span{position:absolute;right:0;top:-20px;font-size:11px;font-weight:800;color:var(--accent);background:var(--surface);padding:1px 7px;border-radius:6px}
+.cols .metaline span{position:absolute;left:0;top:-20px;font-size:11px;font-weight:800;color:var(--accent);background:var(--surface);padding:1px 7px;border-radius:6px}
 .colgrp{display:flex;flex-direction:column;align-items:center;gap:10px;height:100%;justify-content:flex-end;flex:0 0 auto}
 .cstack{position:relative;width:clamp(70px,14vw,110px);display:flex;align-items:flex-end}
 .cstack .proj{position:absolute;left:0;right:0;bottom:0;border:2px dashed color-mix(in srgb,var(--c-out) 80%,transparent);border-radius:12px 12px 4px 4px;background:color-mix(in srgb,var(--c-out) 7%,transparent)}
@@ -260,18 +202,6 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .lc .lf .pj b{color:var(--c-out)}
 .lg-line{display:inline-block;width:22px;height:0;border-top:3px solid var(--text-dim);border-radius:2px;vertical-align:middle}
 .lg-line.dash{border-top:2px dashed var(--c-out)}
-
-/* CONVERSÃO */
-:root{--c-comp:#5b8fd9;--c-fech:#2fb488}
-.ckpis{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,16px)}
-.ck{padding:clamp(16px,1.9vw,20px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft);transition:transform .4s var(--ease),border-color .4s var(--ease)}
-.ck:hover{transform:translateY(-4px);border-color:var(--line)}
-.ck .l{font-size:12px;color:var(--text-dim);font-weight:600;display:flex;gap:7px;align-items:center}
-.ck .l svg{width:15px;height:15px;color:var(--brand);flex-shrink:0}
-.ck .v{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.6vw,40px);font-weight:600;line-height:1;margin-top:10px;color:var(--accent);font-variant-numeric:tabular-nums}
-.ck .v.g{color:var(--brand)}
-.ck .s{font-size:11.5px;color:var(--text-faint);margin-top:6px}
-.gg .ch.na{color:var(--text-faint);background:var(--track)}
 
 /* EVOLUÇÃO POR CANAL */
 .grouped{display:flex;flex-direction:column;gap:17px}
@@ -318,16 +248,13 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .reveal.in{opacity:1;transform:none}
 
 /* RESPONSIVO */
-@media(max-width:1000px){.ins,.ckpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:860px){
   .grid2{grid-template-columns:1fr}
-  .cmp{grid-template-columns:1fr}
   .hbar .row{grid-template-columns:120px 1fr auto}
 }
 @media(max-width:560px){
   .theme-btn .lbl{display:none}
   .brand b,.brand span{display:none}
-  .ins{grid-template-columns:1fr}
   .hbar .row{grid-template-columns:1fr auto;grid-template-areas:'lbl lbl' 'trk val';row-gap:6px}
   .hbar .lbl{grid-area:lbl}.hbar .track{grid-area:trk}.hbar .val{grid-area:val;text-align:right}
   .cols{gap:28px}
@@ -339,6 +266,104 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
   .reveal{opacity:1;transform:none}
 }
 
+/* ====== v15 ====== */
+:root{--c-comp:#5b8fd9;--c-fech:#2fb488}
+.sub-h{font-size:12px;color:var(--text-faint);margin:-4px 0 16px}
+
+/* EVOLUÇÃO DOS MESES: linha + tabela */
+.chart-r{width:100%;position:relative}
+.chart-r svg{display:block;width:100%;height:auto;overflow:visible}
+.tbl-wrap{overflow-x:auto;margin-top:18px;border-radius:12px;border:1px solid var(--line-soft)}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+.tbl th{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);text-align:right;padding:11px 14px;background:var(--surface-2);border-bottom:1px solid var(--line-soft);white-space:nowrap}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl td{padding:11px 14px;text-align:right;font-variant-numeric:tabular-nums;border-bottom:1px solid var(--line-soft);color:var(--text-dim);white-space:nowrap}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td b{color:var(--text);font-weight:800}
+.tbl td.m{font-weight:700;color:var(--text)}
+.tbl tr.cur td{background:color-mix(in srgb,var(--accent) 6%,transparent)}
+.tbl .minibar{display:inline-block;width:70px;height:6px;border-radius:4px;background:var(--track);vertical-align:middle;margin-right:8px;overflow:hidden}
+.tbl .minibar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--gold))}
+.st{font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.st.fech{background:var(--track);color:var(--text-dim)}
+.st.ok{background:color-mix(in srgb,var(--pos) 16%,transparent);color:var(--pos)}
+.st.parc{background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.st.nok{background:color-mix(in srgb,var(--neg) 15%,transparent);color:var(--neg)}
+
+/* DESTAQUES 2x2 */
+.ins{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,1.8vw,18px)}
+.icard{position:relative;overflow:hidden;padding:clamp(18px,2.1vw,24px) clamp(18px,2.1vw,24px) clamp(16px,1.9vw,20px) 26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft);transition:transform .4s var(--ease),border-color .4s var(--ease)}
+.icard:hover{transform:translateY(-3px);border-color:var(--line)}
+.icard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--bar,var(--brand))}
+.icard .ik{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:flex;gap:8px;align-items:center}
+.icard .ik svg{width:15px;height:15px;flex-shrink:0}
+.icard .iv{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.8vw,32px);font-weight:600;margin-top:8px;line-height:1.1}
+.icard .il{list-style:none;margin-top:14px;display:flex;flex-direction:column}
+.icard .il li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--line-soft);font-size:13px;color:var(--text-dim)}
+.icard .il li b{color:var(--text);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.icard .il li .nm{display:flex;align-items:center;gap:8px;min-width:0}
+.icard .il li .nm i{width:9px;height:9px;border-radius:3px;flex-shrink:0}
+.icard .il li .rv{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.icard .il li .delta{font-size:11px;padding:2px 8px}
+.icard .note{font-size:11.5px;color:var(--text-faint);margin-top:8px}
+
+/* COMPARATIVO: tabela de indicadores */
+.ctab td .delta{font-size:11.5px}
+.ctab td.var{min-width:150px}
+.pjx{margin-top:16px;border-radius:12px;border:1px dashed color-mix(in srgb,var(--c-out) 55%,transparent);background:color-mix(in srgb,var(--c-out) 6%,transparent)}
+.pjx summary{cursor:pointer;list-style:none;padding:12px 16px;font-size:12.5px;font-weight:800;color:var(--c-out);display:flex;align-items:center;gap:8px}
+.pjx summary::-webkit-details-marker{display:none}
+.pjx summary::after{content:'+';margin-left:auto;font-size:16px;line-height:1}
+.pjx[open] summary::after{content:'−'}
+.pjx .b{padding:0 16px 14px;font-size:12.5px;color:var(--text-dim);line-height:1.55}
+.pjx .b p+p{margin-top:5px}
+.pjx .calc{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* RANKING com variação */
+.hbar .val .delta{font-size:10.5px;padding:2px 7px;margin-left:8px;vertical-align:1px}
+
+/* CONVERSÃO: barra única (comparecimentos com fechamentos dentro) */
+.ckpis{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,16px)}
+.ck{padding:clamp(16px,1.9vw,20px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft);transition:transform .4s var(--ease),border-color .4s var(--ease)}
+.ck:hover{transform:translateY(-4px);border-color:var(--line)}
+.ck .l{font-size:12px;color:var(--text-dim);font-weight:600;display:flex;gap:7px;align-items:center}
+.ck .l svg{width:15px;height:15px;color:var(--brand);flex-shrink:0}
+.ck .v{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.6vw,40px);font-weight:600;line-height:1;margin-top:10px;color:var(--accent);font-variant-numeric:tabular-nums}
+.ck .v.g{color:var(--brand)}
+.ck .s{font-size:11.5px;color:var(--text-faint);margin-top:6px}
+.bl{display:flex;flex-direction:column;gap:14px}
+.bl-row{display:grid;grid-template-columns:180px 1fr 150px;gap:14px;align-items:center}
+.bl-row .nm{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;min-width:0}
+.bl-row .nm i{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.bl-track{height:24px;border-radius:7px;background:var(--track);overflow:hidden}
+.bl-comp{height:100%;width:0;border-radius:7px;background:color-mix(in srgb,var(--c-comp) 38%,transparent);position:relative;overflow:hidden;transition:width 1.7s var(--ease)}
+.bl-fech{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--c-fech);border-radius:7px;transition:width 1.7s var(--ease)}
+.bl-row .stt{text-align:right;font-size:12px;color:var(--text-faint);white-space:nowrap}
+.bl-row .stt b{font-size:15px;color:var(--text);font-weight:800;margin-right:6px;font-variant-numeric:tabular-nums}
+.bl-row.out .bl-comp{background:color-mix(in srgb,var(--c-comp) 20%,transparent)}
+.bl-leg{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:18px;font-size:12.5px;font-weight:700;color:var(--text-dim)}
+.bl-leg span{display:inline-flex;align-items:center;gap:7px}
+.bl-leg i{width:14px;height:12px;border-radius:3px}
+
+/* LINHAS MÚLTIPLAS (volume e ticket) */
+.mlc svg .ser{transition:opacity .3s var(--ease)}
+.mlc svg.hl .ser{opacity:.12}
+.mlc svg.hl .ser.on{opacity:1}
+.mlc svg.hl .ser.on .ln{stroke-width:4}
+.lgs{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.lgc{font-family:inherit;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--text-dim);padding:6px 11px;border-radius:999px;border:1px solid var(--line-soft);background:transparent;cursor:pointer;transition:background .25s,border-color .25s,color .25s}
+.lgc i{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.lgc b{color:var(--text);font-weight:800;font-variant-numeric:tabular-nums}
+.lgc:hover,.lgc.on{border-color:var(--line);background:color-mix(in srgb,var(--brand) 9%,transparent);color:var(--text)}
+.lgc.ref i{background:none!important;border-top:2px dashed var(--text-dim);height:0;border-radius:0}
+
+@media(max-width:1000px){.ckpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .ins{grid-template-columns:1fr}
+  .bl-row{grid-template-columns:1fr auto;grid-template-areas:'nm stt' 'tr tr';row-gap:7px}
+  .bl-row .nm{grid-area:nm}.bl-row .stt{grid-area:stt}.bl-row .bl-track{grid-area:tr}
+}
+
 </style>
 </head>
 <body>
@@ -346,12 +371,11 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 <header class="topbar">
   <a class="brand" href="#top"><img src="https://i.imgur.com/MoRvBto.png" alt="Royal Odontologia"><span><b>Royal Odontologia</b><span>Faturamento de Leads</span></span></a>
   <nav class="navsec" aria-label="Seções">
-    <a href="#resumo">Resumo</a>
+    <a href="#resumo">Evolução</a>
     <a href="#destaques">Destaques</a>
     <a href="#comparativo">Comparativo</a>
     <a href="#meta">Meta</a>
     <a href="#origens">Por origem</a>
-    <a href="#canal">Por canal</a>
     <a href="#conversao">Conversão</a>
     <a href="#volume">Volume</a>
   </nav>
@@ -367,34 +391,42 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
   <p class="sub" id="heroSub"></p>
 </section>
 
-<!-- 1. RESUMO -->
+<!-- 1. EVOLUÇÃO DOS MESES -->
 <section class="section" id="resumo">
-  <div class="sec-h reveal"><div class="k">Resumo por mês</div><h2>Evolução dos meses</h2><p>Faturamento, volume de leads, ticket médio e percentual da meta em cada mês. No mês em andamento, aparece também a projeção mantendo o ritmo atual.</p></div>
-  <div class="months" id="months"></div>
-  <div class="obs reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span>A barra de cada card mostra quanto do mês já atingiu a meta de R$ 300 mil. A projeção é uma estimativa linear: média diária apurada multiplicada pelos dias do mês.</span></div>
+  <div class="sec-h reveal"><div class="k">Evolução dos meses</div><h2>Faturamento mês a mês</h2><p>Linha do faturamento fechado em cada mês frente à meta de R$ 300 mil. Abaixo, os números de cada mês.</p></div>
+  <div class="panel reveal">
+    <div class="panel__h"><h3>Faturamento por mês</h3><span class="rec">linha dourada = meta</span></div>
+    <div class="chart-r" id="fatLine"></div>
+    <div class="tbl-wrap"><table class="tbl" id="mesTbl"></table></div>
+  </div>
 </section>
 
 <!-- 2. DESTAQUES -->
 <section class="section" id="destaques">
-  <div class="sec-h reveal"><div class="k">Destaques do mês</div><h2 id="insH2">Leitura rápida</h2><p>Pontos que mais chamam atenção no mês atual, calculados automaticamente a partir dos dados.</p></div>
+  <div class="sec-h reveal"><div class="k">Destaques do mês</div><h2 id="insH2">Leitura rápida</h2><p>Os pontos que mais chamam atenção no mês atual, calculados a partir dos dados.</p></div>
   <div class="ins reveal" id="ins"></div>
 </section>
 
 <!-- 3. COMPARATIVO -->
 <section class="section" id="comparativo">
-  <div class="sec-h reveal"><div class="k">Evolução e comparativo</div><h2 id="compH2"></h2><p id="compP"></p></div>
-  <div class="cmp reveal" id="comp" style="margin-bottom:clamp(16px,2.2vw,24px)"></div>
-  <div class="panel reveal">
-    <div class="panel__h"><h3>Faturamento total por mês</h3><span class="rec">com linha de meta</span></div>
-    <div class="cols" id="colsMes"></div>
-    <div class="cols-leg" id="colsLeg"></div>
-    <div class="pj-explain" id="pjExplain"></div>
+  <div class="sec-h reveal"><div class="k">Comparativo</div><h2 id="compH2"></h2><p id="compP"></p></div>
+  <div class="grid2 reveal">
+    <div class="panel">
+      <div class="panel__h"><h3>Indicadores</h3><span class="rec" id="compRec"></span></div>
+      <div class="tbl-wrap" style="margin-top:12px"><table class="tbl ctab" id="compTbl"></table></div>
+    </div>
+    <div class="panel">
+      <div class="panel__h"><h3>Faturamento</h3><span class="rec">com linha de meta</span></div>
+      <div class="cols" id="colsMes"></div>
+      <div class="cols-leg" id="colsLeg"></div>
+      <div id="pjBox"></div>
+    </div>
   </div>
 </section>
 
 <!-- 4. META -->
 <section class="section" id="meta">
-  <div class="sec-h reveal"><div class="hrow"><div><div class="k">Meta mensal</div><h2>Atingimento da meta</h2></div><div class="tabs" data-tabgroup="meta" role="tablist" aria-label="Mês do medidor"></div></div><p>Medidor do faturamento frente à meta de R$ 300 mil, percentual de cada mês e o ritmo necessário para bater a meta no mês atual.</p></div>
+  <div class="sec-h reveal"><div class="hrow"><div><div class="k">Meta mensal</div><h2>Atingimento da meta</h2></div><div class="tabs" data-tabgroup="meta" role="tablist" aria-label="Mês do medidor"></div></div><p>Medidor do mês selecionado, percentual de cada mês e o ritmo diário frente ao necessário para a meta.</p></div>
   <div class="grid2 eq reveal">
     <div class="panel">
       <div class="panel__h"><h3 id="gaugeTitle"></h3><span class="rec">faturamento vs meta</span></div>
@@ -416,66 +448,47 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 
 <!-- 5. POR ORIGEM -->
 <section class="section" id="origens">
-  <div class="sec-h reveal"><div class="hrow"><div><div class="k">Resultado por origem</div><h2>De onde veio o faturamento</h2></div><div class="tabs" data-tabgroup="origem" role="tablist" aria-label="Mês do resultado por origem"></div></div><p>Valor fechado por canal de origem do lead, com o ranking e a participação de cada um no total do mês selecionado.</p></div>
+  <div class="sec-h reveal"><div class="k">Resultado por origem</div><h2>De onde veio o faturamento</h2><p id="origP"></p></div>
   <div class="panel reveal">
-    <div class="panel__h"><h3>Ranking de faturamento</h3><span class="rec" id="rankRec"></span></div>
+    <div class="panel__h"><h3 id="rankH3">Ranking do mês</h3><span class="rec" id="rankRec"></span></div>
     <div class="panel__s" id="rankSub"></div>
     <div class="hbar" id="rankFat" style="margin-top:6px"></div>
   </div>
   <div class="panel reveal" style="margin-top:clamp(16px,2.2vw,24px)">
-    <div class="panel__h"><h3>Participação no total</h3><span class="rec">% do faturamento</span></div>
-    <div class="panel__s">Cada bloco representa uma origem, com área proporcional ao faturamento. Passe o mouse ou toque para ver o nome, o valor e a porcentagem.</div>
-    <div class="treemap" id="treeFat"></div>
-    <div class="tm-leg" id="treeLeg"></div>
-  </div>
-</section>
-
-<!-- 6. POR CANAL -->
-<section class="section" id="canal">
-  <div class="sec-h reveal"><div class="k">Evolução por canal</div><h2>Cada origem, mês a mês</h2><p id="canalP"></p></div>
-  <div class="panel reveal">
+    <div class="panel__h"><h3>Cada origem, mês a mês</h3><span class="rec">escala própria por canal</span></div>
     <div class="lm-top"><div class="monthleg" id="canalLeg" style="margin:0"></div><div class="lm-sum" id="lmSum"></div></div>
     <div class="lm" id="lineMulti"></div>
     <div class="obs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span id="canalObs"></span></div>
   </div>
 </section>
 
-<!-- 6b. CONVERSÃO -->
+<!-- 6. CONVERSÃO -->
 <section class="section" id="conversao">
   <div class="sec-h reveal"><div class="k">Comparecimento e fechamento</div><h2 id="convH2"></h2><p id="convP"></p></div>
   <div class="ckpis reveal" id="convKpis"></div>
-  <div class="grid2 reveal" style="margin-top:clamp(16px,2.2vw,24px)">
-    <div class="panel">
-      <div class="panel__h"><h3>Compareceram e fecharam</h3><span class="rec">por canal</span></div>
-      <div class="panel__s">Quantos leads compareceram à avaliação e quantos fecharam tratamento em cada canal.</div>
-      <div class="monthleg"><span class="ml"><i style="background:var(--c-comp)"></i>Compareceram</span><span class="ml"><i style="background:var(--c-fech)"></i>Fecharam</span></div>
-      <div class="grouped" id="convBars"></div>
-    </div>
-    <div class="panel">
-      <div class="panel__h"><h3>Taxa de conversão</h3><span class="rec">fechamentos ÷ comparecimentos</span></div>
-      <div class="panel__s">De cada 100 pessoas que compareceram, quantas fecharam. Escala de 0 a 100%.</div>
-      <div class="hbar" id="convRate"></div>
-    </div>
+  <div class="panel reveal" style="margin-top:clamp(16px,2.2vw,24px)">
+    <div class="panel__h"><h3>Conversão por canal</h3><span class="rec">ordenado pela taxa</span></div>
+    <div class="panel__s">A barra inteira representa quem compareceu; a parte verde, quem fechou. À direita, a taxa de conversão.</div>
+    <div class="bl-leg"><span><i style="background:color-mix(in srgb,var(--c-comp) 38%,transparent)"></i>Compareceram</span><span><i style="background:var(--c-fech)"></i>Fecharam</span></div>
+    <div class="bl" id="convBl"></div>
+    <div class="obs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span id="convObs"></span></div>
   </div>
-  <div class="obs reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span id="convObs"></span></div>
 </section>
 
 <!-- 7. VOLUME -->
 <section class="section" id="volume">
-  <div class="sec-h reveal"><div class="hrow"><div><div class="k">Volume e ticket</div><h2>Quantidade e valor médio</h2></div><div class="tabs" data-tabgroup="volume" role="tablist" aria-label="Mês de volume e ticket"></div></div><p>Quantos leads cada origem trouxe e o ticket médio de cada canal no mês selecionado.</p></div>
-  <div class="grid2 eq reveal">
-    <div class="panel">
-      <div class="panel__h"><h3>Leads por origem</h3><span class="rec" id="qtdRec"></span></div>
-      <div class="panel__s">Quantidade de leads fechados em cada canal de origem no mês.</div>
-      <div class="hbar" id="qtdOrig" style="margin-top:6px"></div>
-    </div>
-    <div class="panel">
-      <div class="panel__h"><h3>Ticket médio por origem</h3><span class="rec">R$ por lead</span></div>
-      <div class="panel__s">Faturamento da origem dividido pela quantidade de leads fechados nela.</div>
-      <div class="hbar" id="ticketOrig" style="margin-top:6px"></div>
-    </div>
+  <div class="sec-h reveal"><div class="k">Volume e ticket</div><h2>Quantidade e valor médio</h2><p>Leads fechados e ticket médio de cada origem, mês a mês, todos no mesmo gráfico. Cada bolinha mostra o número do mês. Passe o mouse ou toque em um canal da legenda para destacá-lo.</p></div>
+  <div class="panel reveal">
+    <div class="panel__h"><h3>Leads fechados por origem</h3><span class="rec" id="leadsRec"></span></div>
+    <div class="chart-r mlc" id="volLeads"></div>
+    <div class="lgs" id="volLeadsLeg"></div>
   </div>
-  <div class="obs reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span id="volObs"></span></div>
+  <div class="panel reveal" style="margin-top:clamp(16px,2.2vw,24px)">
+    <div class="panel__h"><h3>Ticket médio por origem</h3><span class="rec">R$ por lead fechado</span></div>
+    <div class="chart-r mlc" id="volTicket"></div>
+    <div class="lgs" id="volTicketLeg"></div>
+    <div class="obs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span>Ticket médio = faturamento da origem ÷ leads fechados nela. A linha tracejada é o ticket médio geral do mês. Canais sem fechamento no mês ficam sem ponto naquele mês.</span></div>
+  </div>
 </section>
 
 <section class="section" style="padding-top:0">
@@ -498,31 +511,28 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 /* =====================================================================
    DADOS · para adicionar um mês novo:
    1) incluir o mês no fim de MESES (dias = dias do mês, apurados = dias com dados);
-   2) incluir os valores do mês em cada origem (m:{...}).
-   O mês atual é sempre o último da lista e vira o padrão das abas.
+   2) incluir os valores do mês em cada origem (m:{...}) e, se houver, os comparecimentos (cp:{...}).
+   O mês atual é sempre o último da lista e vira o padrão do painel.
    ===================================================================== */
 const META_MES=300000, ANO=2026;
 const MESES=[
   {k:'set', nome:'Setembro', abr:'Set', cor:'--c-set', dias:30, apurados:30},
   {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:31, corte:'31/10'}
 ];
-/* Cristiana reúne "Agendamento Cristiana" (setembro) e "Indicação Cristiana" (outubro). */
+/* Cristiana reúne "Agendamento Cristiana" (setembro) e "Indicação Cristiana" (outubro).
+   "Indicação de paciente" = Indicação paciente CRC. semConv = fora da taxa de conversão. */
 const ORIGENS=[
   {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}}, cp:{out:40}},
-  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9}}, cp:{out:18}},
-  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10}}, cp:{out:34}},
-  {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0}}, cp:{out:5}},
-  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10}}, cp:{out:1}, semConv:1},
-  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1}}, cp:{out:6}},
-  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:23475.70,q:4}}, cp:{out:6}},
+  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9}},   cp:{out:18}},
+  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10}},  cp:{out:34}},
+  {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0}},          cp:{out:5}},
+  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10}},  cp:{out:1}, semConv:1},
+  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1}},    cp:{out:6}},
+  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:23475.70,q:4}},   cp:{out:6}},
   {k:'Cristiana',              c:'--o-cristiana', m:{set:{v:17482.60,q:5},  out:{v:16263.31,q:9}}},
   {k:'Agendamento Andreza',    c:'--o-andreza',   m:{set:{v:2000.00,q:2},   out:{v:16800.00,q:3}}},
   {k:'Indicação Doutor Caio',  c:'--o-caio',      m:{set:{v:345.00,q:1},    out:{v:0,q:0}}}
 ];
-
-/* Comparecimentos (planilha de comparecimentos): cp por origem e mês.
-   "Indicação de paciente" = Indicação paciente CRC. semConv = fora da taxa de conversão.
-   Cristiana, Agendamento Andreza e Doutor Caio não têm comparecimento separado. */
 const FDS={out:{n:19,resp:'Verônica Cristina'}}; /* comparecimentos agendados para finais de semana */
 
 /* ==================== DERIVADOS ==================== */
@@ -536,8 +546,10 @@ const totV=mk=>ORIGENS.reduce((a,o)=>a+vOf(o,mk),0);
 const totQ=mk=>ORIGENS.reduce((a,o)=>a+qOf(o,mk),0);
 const projV=mk=>{const m=M[mk];return isParc(m)?totV(mk)/m.apurados*m.dias:totV(mk);};
 const projQ=mk=>{const m=M[mk];return isParc(m)?totQ(mk)/m.apurados*m.dias:totQ(mk);};
+const cpTot=mk=>{const t=ORIGENS.filter(o=>o.cp&&o.cp[mk]!=null);return t.length?t.reduce((a,o)=>a+o.cp[mk],0):null;};
+const convOf=mk=>{const t=ORIGENS.filter(o=>o.cp&&o.cp[mk]!=null&&!o.semConv);if(!t.length)return null;const c=t.reduce((a,o)=>a+o.cp[mk],0),f=t.reduce((a,o)=>a+qOf(o,mk),0);return c?f/c*100:null;};
 const low=s=>s.toLowerCase();
-const sel={meta:ATUAL.k, origem:ATUAL.k, volume:ATUAL.k};
+const sel={meta:ATUAL.k};
 
 /* ==================== UTIL ==================== */
 const sysReduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -546,10 +558,21 @@ const nf2=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFr
 const brl=n=>'R$ '+nf2(n);
 const milK1=n=>'R$ '+(n/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+' mil';
 const milK=n=>Math.abs(n)>=1000?'R$ '+(n/1000).toLocaleString('pt-BR',{maximumFractionDigits:0})+' mil':brl(n);
+const kfmt=v=>v>=1000?milK1(v):'R$ '+nf0(v);
 const pct=(n,d=1)=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})+'%';
 const joinPt=a=>a.length<2?a.join(''):a.slice(0,-1).join(', ')+' e '+a[a.length-1];
+const niceMax=v=>{if(v<=0)return 1;const p=Math.pow(10,Math.floor(Math.log10(v))),s=p/2;return Math.ceil(v/s)*s;};
 function cssv(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim();}
 const $=id=>document.getElementById(id);
+const FONT='Manrope,system-ui,sans-serif';
+function chip(a,b,parcB,pjB){ /* variação de b frente a a */
+  if(a===0&&b===0)return '<span class="delta flat" style="color:var(--text-faint);background:var(--track)">sem fechamento</span>';
+  if(a===0)return '<span class="delta up">▲ novo</span>';
+  if(b>=a)return `<span class="delta up">▲ ${pct((b/a-1)*100)}</span>`;
+  if(parcB){if(pjB>=a)return '<span class="delta flat">no ritmo de superar</span>';return `<span class="delta down">▼ ${pct((1-pjB/a)*100)} proj.</span>`;}
+  if(b===0)return '<span class="delta down">▼ sem fechamento</span>';
+  return `<span class="delta down">▼ ${pct((1-b/a)*100)}</span>`;
+}
 
 const tip=$('tip');
 function tipShow(e,h){tip.innerHTML=h;tip.classList.add('on');tipMove(e);}
@@ -570,15 +593,14 @@ function setTheme(t){document.documentElement.setAttribute('data-theme',t);try{l
 themeBtn.addEventListener('click',()=>setTheme(curTheme()==='dark'?'light':'dark'));
 
 /* ==================== ANIMAÇÃO ==================== */
-const ANIM_CONTAINERS='.hbar,.cols,.gauge,.months,.treemap,.grouped,.metamonth,.lm';
-const BAR_SEL='.fill,.fl,.mm-fill', COL_SEL='.bar', ARC_SEL='.gauge-arc.val,.ln', TM_SEL='.tm-in', DOT_SEL='.ldot';
+const ANIM_CONTAINERS='.hbar,.cols,.gauge,.metamonth,.lm,.bl,.chart-r';
+const BAR_SEL='.fill,.fl,.mm-fill,.bl-comp,.bl-fech', COL_SEL='.bar', ARC_SEL='.gauge-arc.val,.ln', DOT_SEL='.ldot';
 const seen=new WeakSet();
 function chartInit(el){
   if(sysReduce){chartFinal(el);return;}
   el.querySelectorAll(BAR_SEL).forEach(b=>{b.style.transition='none';b.style.width='0';});
   el.querySelectorAll(COL_SEL).forEach(b=>{b.style.transition='none';b.style.height='0';});
   el.querySelectorAll(ARC_SEL).forEach(p=>{try{const L=p.getTotalLength();p.style.transition='none';p.style.strokeDasharray=L;p.style.strokeDashoffset=L;}catch(e){}});
-  el.querySelectorAll(TM_SEL).forEach(t=>{t.style.transition='none';t.style.opacity='0';t.style.transform='scale(.72)';});
   el.querySelectorAll(DOT_SEL).forEach(d=>{d.style.transition='none';d.style.opacity='0';});
 }
 function chartPlay(el){
@@ -586,18 +608,16 @@ function chartPlay(el){
   chartInit(el);
   void el.getBoundingClientRect();
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    el.querySelectorAll(BAR_SEL).forEach((b,i)=>{b.style.transition='width 1.7s var(--ease) '+(i*0.06)+'s';b.style.width=b.style.getPropertyValue('--w');});
+    el.querySelectorAll(BAR_SEL).forEach((b,i)=>{b.style.transition='width 1.7s var(--ease) '+(i*0.05)+'s';b.style.width=b.style.getPropertyValue('--w');});
     el.querySelectorAll(COL_SEL).forEach((b,i)=>{b.style.transition='height 2s var(--ease) '+(i*0.2)+'s';b.style.height=b.style.getPropertyValue('--h');});
-    el.querySelectorAll(ARC_SEL).forEach((p,i)=>{p.style.transition='stroke-dashoffset '+(p.classList.contains('ln')?'1.6s':'2.3s')+' var(--ease) '+(p.classList.contains('ln')?(.15+i*.05):.15)+'s';p.style.strokeDashoffset='0';});
-    el.querySelectorAll(DOT_SEL).forEach((d,i)=>{d.style.transition='opacity .6s var(--ease) '+(1+i*.03)+'s';d.style.opacity='1';});
-    el.querySelectorAll(TM_SEL).forEach((t,i)=>{t.style.transition='opacity 1s var(--ease) '+(i*0.08)+'s,transform 1s var(--ease) '+(i*0.08)+'s,box-shadow .4s var(--ease)';t.style.opacity='1';t.style.transform='scale(1)';});
+    el.querySelectorAll(ARC_SEL).forEach((p,i)=>{const ln=p.classList.contains('ln');p.style.transition='stroke-dashoffset '+(ln?'1.8s':'2.3s')+' var(--ease) '+(ln?(.15+i*.06):.15)+'s';p.style.strokeDashoffset='0';});
+    el.querySelectorAll(DOT_SEL).forEach((d,i)=>{d.style.transition='opacity .6s var(--ease) '+(1.1+Math.min(i,30)*.02)+'s';d.style.opacity='1';});
   }));
 }
 function chartFinal(el){
   el.querySelectorAll(BAR_SEL).forEach(b=>{b.style.transition='none';b.style.width=b.style.getPropertyValue('--w');});
   el.querySelectorAll(COL_SEL).forEach(b=>{b.style.transition='none';b.style.height=b.style.getPropertyValue('--h');});
-  el.querySelectorAll(ARC_SEL).forEach(p=>{p.style.transition='none';try{p.style.strokeDasharray=p.getTotalLength();}catch(e){}p.style.strokeDashoffset='0';});
-  el.querySelectorAll(TM_SEL).forEach(t=>{t.style.transition='box-shadow .4s var(--ease)';t.style.opacity='1';t.style.transform='scale(1)';});
+  el.querySelectorAll(ARC_SEL).forEach(p=>{p.style.transition='none';p.style.strokeDasharray='none';p.style.strokeDashoffset='0';});
   el.querySelectorAll(DOT_SEL).forEach(d=>{d.style.transition='none';d.style.opacity='1';});
 }
 const chartIO=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){seen.add(en.target);chartPlay(en.target);chartIO.unobserve(en.target);}});},{threshold:.15});
@@ -606,7 +626,7 @@ function afterThemeRender(){document.querySelectorAll(ANIM_CONTAINERS).forEach(e
 function replay(id){const el=$(id);if(el){seen.add(el);chartPlay(el);}}
 const revealIO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealIO.unobserve(e.target);}});},{threshold:.12});
 
-/* ==================== MOTORES DE GRÁFICO ==================== */
+/* ==================== MOTORES ==================== */
 function hbar(elId,items,opts={}){
   const el=$(elId); if(!el)return;
   const max=opts.max||Math.max(...items.map(i=>i.v),1);
@@ -618,162 +638,284 @@ function hbar(elId,items,opts={}){
   }).join('');
   bindTips(el);
 }
-function squarify(items,W,H){
-  const total=items.reduce((a,c)=>a+c.v,0), scale=(W*H)/total;
-  const data=items.map(c=>({...c,a:c.v*scale}));
-  const worst=(ar,side)=>{const s=ar.reduce((a,b)=>a+b,0),mx=Math.max(...ar),mn=Math.min(...ar);return Math.max((side*side*mx)/(s*s),(s*s)/(side*side*mn));};
-  const rects=[]; let x=0,y=0,w=W,h=H,i=0;
-  while(i<data.length){
-    const side=Math.min(w,h); let row=[data[i]]; i++;
-    while(i<data.length){const cur=row.map(c=>c.a),nxt=row.concat(data[i]).map(c=>c.a);if(worst(nxt,side)<=worst(cur,side)){row.push(data[i]);i++;}else break;}
-    const thick=row.reduce((a,c)=>a+c.a,0)/side;
-    if(w>=h){let yy=y;row.forEach(c=>{const ch=c.a/thick;rects.push({c,x,y:yy,w:thick,h:ch});yy+=ch;});x+=thick;w-=thick;}
-    else{let xx=x;row.forEach(c=>{const cw=c.a/thick;rects.push({c,x:xx,y,w:cw,h:thick});xx+=cw;});y+=thick;h-=thick;}
-  }
-  return rects;
+const xPos=(i,n,pl,iw)=>n===1?pl+iw/2:pl+iw*(0.06+0.88*i/(n-1));
+function gridY(W,pl,pr,pt,ih,top,fmt){
+  let g='';for(let t=0;t<=4;t++){const v=top*t/4,y=pt+ih-ih*t/4;
+    g+=`<line x1="${pl}" y1="${y.toFixed(1)}" x2="${W-pr}" y2="${y.toFixed(1)}" stroke="${cssv('--line-soft')}" stroke-width="1"/><text x="${pl-8}" y="${(y+4).toFixed(1)}" text-anchor="end" fill="${cssv('--text-faint')}" font-size="10.5" font-weight="600" font-family="${FONT}">${fmt(v)}</text>`;}
+  return g;
 }
-function treemap(elId,legId,items){
-  const el=$(elId); if(!el)return;
-  const data=[...items].sort((a,b)=>b.v-a.v), total=data.reduce((a,d)=>a+d.v,0), W=1000,H=470;
-  el.innerHTML=squarify(data,W,H).map(r=>{
-    const it=r.c,share=it.v/total*100;
-    const big=(r.w>150&&r.h>72),med=(r.w>92&&r.h>46);
-    const lab=big?`<b class="nm">${it.k}</b><span class="pc">${pct(share)}</span><span class="vv">${brl(it.v)}</span>`:med?`<b class="nm">${it.k}</b><span class="pc">${pct(share)}</span>`:'';
-    return `<div class="tm-cell" style="left:${(r.x/W*100).toFixed(2)}%;top:${(r.y/H*100).toFixed(2)}%;width:${(r.w/W*100).toFixed(2)}%;height:${(r.h/H*100).toFixed(2)}%;--col:${cssv(it.c)}" ${tipAttr(`<b>${it.k}</b><span>${brl(it.v)} · ${pct(share)} do total · ${it.q} ${it.q===1?'lead':'leads'}</span>`)}><div class="tm-in">${lab}</div></div>`;
-  }).join('');
+const axK=v=>v>=1000?'R$ '+nf0(v/1000)+' mil':(v>0?'R$ '+nf0(v):'0');
+
+/* ===== Linha do faturamento por mês, com meta ===== */
+function fatLine(){
+  const el=$('fatLine'), W=Math.max(300,Math.round(el.clientWidth||900)), mob=W<640;
+  const H=mob?260:330, pl=mob?50:70, pr=mob?14:30, pt=44, pb=44, iw=W-pl-pr, ih=H-pt-pb, n=MESES.length;
+  const vals=MESES.map(m=>totV(m.k)), pj=isParc(ATUAL)?projV(ATUAL.k):null;
+  const top=niceMax(Math.max(...vals,pj||0,META_MES)*1.12);
+  const X=i=>xPos(i,n,pl,iw), Y=v=>pt+ih-v/top*ih;
+  const pts=vals.map((v,i)=>[X(i),Y(v)]);
+  const line='M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L');
+  const area=line+` L${pts[n-1][0].toFixed(1)} ${pt+ih} L${pts[0][0].toFixed(1)} ${pt+ih} Z`;
+  const ym=Y(META_MES), gold=cssv('--accent'), txt=cssv('--text'), dim=cssv('--text-dim');
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Faturamento por mês: ${MESES.map((m,i)=>m.nome+' '+brl(vals[i])).join(', ')}">
+    <defs><linearGradient id="fatG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${cssv('--brand')}" stop-opacity=".30"/><stop offset="1" stop-color="${cssv('--brand')}" stop-opacity="0"/></linearGradient></defs>
+    ${gridY(W,pl,pr,pt,ih,top,axK)}
+    <path class="ldot" d="${area}" fill="url(#fatG)"/>
+    <line x1="${pl}" y1="${ym.toFixed(1)}" x2="${W-pr}" y2="${ym.toFixed(1)}" stroke="${gold}" stroke-width="2" stroke-dasharray="7 6"/>
+    <text x="${(pl+iw/2).toFixed(1)}" y="${(Math.abs(Y(vals[0])-ym)<30&&Math.abs(Y(vals[n-1])-ym)<30?(Math.min(Y(vals[0]),Y(vals[n-1]))<ym?ym+18:ym-9):ym-9).toFixed(1)}" text-anchor="middle" fill="${gold}" font-size="11.5" font-weight="800" font-family="${FONT}">Meta ${milK(META_MES)}</text>`;
+  if(pj!=null&&n>1){const pp=[X(n-1),Y(pj)],pv=pts[n-2];
+    s+=`<path class="ldot" d="M${pv[0].toFixed(1)} ${pv[1].toFixed(1)} L${pp[0].toFixed(1)} ${pp[1].toFixed(1)}" fill="none" stroke="${cssv('--c-out')}" stroke-width="2" stroke-dasharray="5 5"/>
+    <circle class="ldot" cx="${pp[0].toFixed(1)}" cy="${pp[1].toFixed(1)}" r="6" fill="${cssv('--surface')}" stroke="${cssv('--c-out')}" stroke-width="2" ${tipAttr(`<b>Projeção de ${low(ATUAL.nome)}</b><span>${brl(pj)} · ${pct(pj/META_MES*100)} da meta, mantendo o ritmo</span>`)}/>
+    <text class="ldot" x="${(pp[0]-10).toFixed(1)}" y="${(pp[1]-12).toFixed(1)}" text-anchor="end" fill="${cssv('--c-out')}" font-size="11" font-weight="800" font-family="${FONT}">proj. ${kfmt(pj)}</text>`;}
+  s+=`<path class="ln" d="${line}" fill="none" stroke="${cssv('--brand')}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  pts.forEach((p,i)=>{const m=MESES[i],v=vals[i],pm=v/META_MES*100,ok=pm>=100,par=isParc(m);
+    const anc=n>1&&i===0?'start':(n>1&&i===n-1?'end':'middle'),dx=n>1&&i===0?-4:(n>1&&i===n-1?4:0);
+    const above=!(pj!=null&&i===n-1);
+    const ly=above?p[1]-16:p[1]+24, ly2=above?p[1]-31:p[1]+39;
+    s+=`<circle class="ldot" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="6" fill="${ok?cssv('--brand'):cssv('--c-out')}" stroke="${cssv('--surface')}" stroke-width="2.5" ${tipAttr(`<b>${m.nome}${par?' (parcial)':''}</b><span>${brl(v)} · ${pct(pm)} da meta · ${totQ(m.k)} leads</span>`)}/>
+      <text class="ldot" x="${(p[0]+dx).toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anc}" fill="${txt}" font-size="${mob?12:13.5}" font-weight="800" font-family="${FONT}">${kfmt(v)}</text>
+      <text class="ldot" x="${(p[0]+dx).toFixed(1)}" y="${(above?ly2:ly2).toFixed(1)}" text-anchor="${anc}" fill="${ok?cssv('--pos'):dim}" font-size="11" font-weight="700" font-family="${FONT}">${pct(pm)} da meta${par?' · parcial':''}</text>
+      <text x="${p[0].toFixed(1)}" y="${H-12}" text-anchor="${anc}" dx="${dx}" fill="${dim}" font-size="12" font-weight="700" font-family="${FONT}">${m.nome}</text>`;});
+  el.innerHTML=s+'</svg>';
   bindTips(el);
-  $(legId).innerHTML=data.map(d=>`<span class="c"><i style="background:${cssv(d.c)}"></i>${d.k} <b>${pct(d.v/total*100)}</b></span>`).join('');
+}
+function mesTable(){
+  const rows=MESES.map((m,i)=>{
+    const v=totV(m.k),q=totQ(m.k),tk=q?v/q:0,pm=v/META_MES*100,p=isParc(m),prev=i?MESES[i-1]:null;
+    const st=p?'<span class="st parc">Parcial</span>':(pm>=100?'<span class="st ok">Meta batida</span>':'<span class="st nok">Abaixo da meta</span>');
+    const vr=prev?chip(totV(prev.k),v,p,projV(m.k)):'<span style="color:var(--text-faint)">primeiro mês</span>';
+    return `<tr class="${m===ATUAL?'cur':''}"><td class="m">${m.nome}${p?` <small style="color:var(--text-faint);font-weight:600">(até ${m.corte})</small>`:''}</td><td><b>${brl(v)}</b></td><td>${vr}</td><td>${nf0(q)}</td><td>${brl(tk)}</td><td><span class="minibar"><i style="width:${Math.min(pm,100).toFixed(1)}%"></i></span>${pct(pm)}</td><td>${st}</td></tr>`;
+  }).reverse().join('');
+  $('mesTbl').innerHTML=`<thead><tr><th>Mês</th><th>Faturamento</th><th>Variação</th><th>Leads</th><th>Ticket médio</th><th>% da meta</th><th>Situação</th></tr></thead><tbody>${rows}</tbody>`;
 }
 
-/* ==================== CABEÇALHO E TEXTOS ==================== */
+/* ===== Linhas múltiplas com legenda interativa ===== */
+function multiLine(elId,legId,series,o){
+  const el=$(elId), W=Math.max(300,Math.round(el.clientWidth||900)), mob=W<640, n=MESES.length;
+  const labW=mob?0:(o.labW||200), H=mob?460:540, pl=mob?40:58, pr=mob?10:labW+16, pt=26, pb=42, iw=W-pl-pr, ih=H-pt-pb;
+  const inL=mob?40:52, inR=mob?40:14;
+  const all=series.flatMap(s=>s.vals.filter(v=>v!=null)).concat(o.ref?o.ref.vals.filter(v=>v!=null):[]);
+  const top=niceMax(Math.max(...all,1)*1.08);
+  const X=i=>n===1?pl+iw/2:pl+inL+(iw-inL-inR)*i/(n-1), Y=v=>pt+ih-v/top*ih;
+  /* afasta lateralmente bolinhas com o mesmo valor no mesmo mês */
+  const dx={};
+  MESES.forEach((m,i)=>{const grp={};series.forEach((sr,si)=>{const v=sr.vals[i];if(v==null)return;const key=Math.round(Y(v));(grp[key]=grp[key]||[]).push(si);});
+    Object.values(grp).forEach(g=>g.forEach((si,k)=>{dx[si+'_'+i]=(k-(g.length-1)/2)*11;}));});
+  const PX=(si,i)=>X(i)+(dx[si+'_'+i]||0);
+  const surf=cssv('--surface');
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${o.aria}">${gridY(W,pl,pr,pt,ih,top,o.axis)}`;
+  MESES.forEach((m,i)=>{s+=`<text x="${X(i).toFixed(1)}" y="${H-12}" text-anchor="middle" fill="${cssv('--text-dim')}" font-size="12" font-weight="700" font-family="${FONT}">${m.nome}${isParc(m)?' (parcial)':''}</text>`;});
+  const segs=(vals,si)=>{let d='',prev=false;vals.forEach((v,i)=>{if(v==null){prev=false;return;}d+=(prev?' L':' M')+(si==null?X(i):PX(si,i)).toFixed(1)+' '+Y(v).toFixed(1);prev=true;});return d.trim();};
+  if(o.ref){s+=`<path d="${segs(o.ref.vals)}" fill="none" stroke="${cssv('--text-dim')}" stroke-width="2" stroke-dasharray="6 5" class="ldot"/>`;
+    o.ref.vals.forEach((v,i)=>{if(v!=null)s+=`<circle class="ldot" cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="3.5" fill="${cssv('--text-dim')}" ${tipAttr(`<b>${o.ref.label} · ${MESES[i].nome}</b><span>${o.fmt(v)}</span>`)}/>`;});}
+  /* números junto às bolinhas, com separação vertical por mês */
+  const nlab={};
+  MESES.forEach((m,i)=>{
+    if(!mob&&i===n-1&&n>1)return; /* no computador o último mês já tem rótulo com nome e valor à direita */
+    const side=(i===0&&n>1)?'L':'R';
+    const arr=series.map((sr,si)=>sr.vals[i]==null?null:{si,y:Y(sr.vals[i]),v:sr.vals[i]}).filter(Boolean).sort((a,b)=>a.y-b.y);
+    const gap=14,minY=pt+6,maxY=pt+ih+4;
+    arr.forEach((l,k)=>{l.ly=Math.max(l.y,k?arr[k-1].ly+gap:minY);});
+    for(let k=arr.length-1;k>=0;k--){const lim=k===arr.length-1?maxY:arr[k+1].ly-gap;if(arr[k].ly>lim)arr[k].ly=lim;}
+    arr.forEach(l=>{const x0=side==='L'?X(i)-Math.max(...series.map((_,q)=>Math.abs(dx[q+'_'+i]||0)))-9:X(i)+Math.max(...series.map((_,q)=>Math.abs(dx[q+'_'+i]||0)))+9;
+      (nlab[l.si]=nlab[l.si]||[]).push(`<text class="ldot" x="${x0.toFixed(1)}" y="${(l.ly+4).toFixed(1)}" text-anchor="${side==='L'?'end':'start'}" fill="${cssv(series[l.si].c)}" stroke="${surf}" stroke-width="3" paint-order="stroke" font-size="11.5" font-weight="800" font-family="${FONT}">${o.short(l.v)}</text>`);});
+  });
+  const labs=[];
+  series.forEach((sr,si)=>{
+    const col=cssv(sr.c);
+    let g=`<g class="ser" data-i="${si}">`;
+    const d=segs(sr.vals,si); if(d)g+=`<path class="ln" d="${d}" fill="none" stroke="${col}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`;
+    sr.vals.forEach((v,i)=>{if(v==null)return;g+=`<circle class="ldot" cx="${PX(si,i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="5" fill="${col}" stroke="${surf}" stroke-width="2" ${tipAttr(`<b>${sr.k} · ${MESES[i].nome}</b><span>${o.fmt(v)}${sr.extra?sr.extra(i):''}</span>`)}/>`;});
+    g+=(nlab[si]||[]).join('');
+    const lv=sr.vals[n-1];
+    if(!mob&&lv!=null)labs.push({si,y:Y(lv),t:`${sr.k} · ${o.fmt(lv)}`,col});
+    g+='</g>'; s+=g;
+  });
+  if(!mob&&o.ref&&o.ref.vals[n-1]!=null)labs.push({si:-1,y:Y(o.ref.vals[n-1]),t:`${o.ref.label} · ${o.fmt(o.ref.vals[n-1])}`,col:cssv('--text-dim')});
+  if(labs.length){
+    labs.sort((a,b)=>a.y-b.y);const gap=17,minY=pt+4,maxY=pt+ih;
+    labs.forEach((l,i)=>{l.ly=Math.max(l.y,i?labs[i-1].ly+gap:minY);});
+    for(let i=labs.length-1;i>=0;i--){const lim=i===labs.length-1?maxY:labs[i+1].ly-gap;if(labs[i].ly>lim)labs[i].ly=lim;}
+    const x0=X(n-1)+Math.max(...series.map((_,q)=>Math.abs(dx[q+'_'+(n-1)]||0)))+9,x1=x0+16;
+    labs.forEach(l=>{const tag=l.si>=0?`class="ldot lab" data-i="${l.si}"`:'class="ldot"';
+      s+=`<g ${tag}><path d="M${x0.toFixed(1)} ${l.y.toFixed(1)} L${x1.toFixed(1)} ${l.ly.toFixed(1)}" stroke="${l.col}" stroke-width="1" opacity=".5" fill="none"/><text x="${(x1+4).toFixed(1)}" y="${(l.ly+4).toFixed(1)}" fill="${l.col}" font-size="11.5" font-weight="800" font-family="${FONT}">${l.t}</text></g>`;});
+  }
+  el.innerHTML=s+'</svg>';
+  const svg=el.querySelector('svg');
+  svg.querySelectorAll('g.lab').forEach(l=>{const g=svg.querySelector(`g.ser[data-i="${l.dataset.i}"]`);if(g)g.appendChild(l);});
+  bindTips(el);
+  const leg=$(legId);
+  leg.innerHTML=series.map((sr,si)=>{const lv=sr.vals[n-1];return `<button class="lgc" data-i="${si}"><i style="background:${cssv(sr.c)}"></i>${sr.k} <b>${lv!=null?o.fmt(lv):'sem fech.'}</b></button>`;}).join('')+
+    (o.ref?`<span class="lgc ref" style="cursor:default"><i></i>${o.ref.label} <b>${o.ref.vals[n-1]!=null?o.fmt(o.ref.vals[n-1]):''}</b></span>`:'');
+  let pin=null;
+  const hl=i=>{svg.classList.toggle('hl',i!=null);svg.querySelectorAll('g.ser').forEach(g=>g.classList.toggle('on',g.dataset.i==String(i)));leg.querySelectorAll('.lgc[data-i]').forEach(b=>b.classList.toggle('on',b.dataset.i==String(i)));};
+  leg.querySelectorAll('.lgc[data-i]').forEach(b=>{
+    b.addEventListener('mouseenter',()=>hl(+b.dataset.i));
+    b.addEventListener('mouseleave',()=>hl(pin));
+    b.addEventListener('focus',()=>hl(+b.dataset.i));
+    b.addEventListener('blur',()=>hl(pin));
+    b.addEventListener('click',()=>{pin=(pin===+b.dataset.i)?null:+b.dataset.i;hl(pin);});
+  });
+  svg.querySelectorAll('g.ser').forEach(g=>{g.addEventListener('mouseenter',()=>hl(+g.dataset.i));g.addEventListener('mouseleave',()=>hl(pin));});
+}
+
+/* ===== Mini gráficos de linha por origem ===== */
+function lineMulti(){
+  const el=$('lineMulti'), n=MESES.length, P=ANTER?ANTER.k:null, C=ATUAL.k, parc=isParc(ATUAL);
+  const data=[...ORIGENS].sort((a,b)=>MESES.reduce((s,m)=>s+vOf(b,m.k),0)-MESES.reduce((s,m)=>s+vOf(a,m.k),0));
+  const W=300,H=160,pl=16,pr=16,pt=28,pb=26,iw=W-pl-pr,ih=H-pt-pb;
+  const X=i=>n===1?W/2:pl+iw*(n===2?(i?0.84:0.16):0.06+0.88*i/(n-1));
+  const fator=parc?ATUAL.dias/ATUAL.apurados:1;
+  let up=0,dn=0,rt=0;
+  el.innerHTML=data.map(o=>{
+    const col=cssv(o.c), vals=MESES.map(m=>vOf(o,m.k)), pj=parc?vOf(o,C)*fator:null;
+    const top=Math.max(...vals,pj||0,1)*1.14, Y=v=>pt+ih-(v/top)*ih;
+    const pts=vals.map((v,i)=>[X(i),Y(v)]);
+    const line='M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L');
+    const area=line+` L${pts[n-1][0].toFixed(1)} ${(pt+ih).toFixed(1)} L${pts[0][0].toFixed(1)} ${(pt+ih).toFixed(1)} Z`;
+    const gid='lg'+ORIGENS.indexOf(o);
+    let ch='';
+    if(P){const a=vOf(o,P),b=vOf(o,C);ch=chip(a,b,parc,pj);
+      if(a===0&&b===0){}else if(a===0||b>=a)up++;else if(parc&&pj>=a&&b>0)rt++;else dn++;}
+    let pjs='';
+    if(parc&&n>1){const pp=[X(n-1),Y(pj)],pv=pts[n-2];
+      pjs=`<path d="M${pv[0].toFixed(1)} ${pv[1].toFixed(1)} L${pp[0].toFixed(1)} ${pp[1].toFixed(1)}" fill="none" stroke="${cssv('--c-out')}" stroke-width="1.8" stroke-dasharray="4 4" class="ldot"/>
+        <circle class="ldot" cx="${pp[0].toFixed(1)}" cy="${pp[1].toFixed(1)}" r="4" fill="${cssv('--surface-2')}" stroke="${cssv('--c-out')}" stroke-width="1.8" ${tipAttr(`<b>${o.k} · projeção</b><span>${brl(pj)} mantendo o ritmo</span>`)}/>`;}
+    const labs=vals.map((v,i)=>{let y=pts[i][1]-10;const anc=i===0?'start':(i===n-1?'end':'middle'),x=pts[i][0]+(i===0?-6:(i===n-1?6:0));
+      if(parc&&i===n-1&&pj>v&&Y(v)-Y(pj)<26&&pts[i][1]+19<pt+ih-2)y=pts[i][1]+19;
+      return `<text class="ldot" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${anc}" fill="${cssv('--text')}" font-size="11.5" font-weight="800" font-family="${FONT}">${kfmt(v)}</text>`;}).join('');
+    const xl=MESES.map((m,i)=>`<text x="${X(i).toFixed(1)}" y="${H-6}" text-anchor="${n===2?(i?'end':'start'):'middle'}" dx="${n===2?(i?6:-6):0}" fill="${cssv('--text-faint')}" font-size="10.5" font-weight="700" font-family="${FONT}">${m.abr}${isParc(m)?' (parc.)':''}</text>`).join('');
+    const dots=pts.map((p,i)=>`<circle class="ldot" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4.5" fill="${col}" stroke="${cssv('--surface-2')}" stroke-width="2" ${tipAttr(`<b>${o.k} · ${MESES[i].nome}</b><span>${brl(vals[i])} · ${qOf(o,MESES[i].k)} ${qOf(o,MESES[i].k)===1?'lead':'leads'}</span>`)}/>`).join('');
+    const svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.k}: ${MESES.map((m,i)=>m.nome+' '+brl(vals[i])).join(', ')}">
+      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".28"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
+      <line x1="${pl}" y1="${pt+ih}" x2="${W-pr}" y2="${pt+ih}" stroke="${cssv('--line-soft')}" stroke-width="1"/>
+      <path class="ldot" d="${area}" fill="url(#${gid})"/>${pjs}
+      <path class="ln" d="${line}" fill="none" stroke="${col}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${dots}${labs}${xl}</svg>`;
+    const foot=`<div class="lf"><span>${ATUAL.nome}: <b>${qOf(o,C)} ${qOf(o,C)===1?'lead':'leads'}</b></span>${parc?`<span class="pj">Projeção: <b>${kfmt(pj)}</b></span>`:(P?`<span>${ANTER.nome}: <b>${qOf(o,P)}</b></span>`:'')}</div>`;
+    return `<div class="lc"><div class="lh"><i style="background:${col}"></i><b>${o.k}${o.hl?' ★':''}</b></div><div class="ls">${ch}</div>${svg}${foot}</div>`;
+  }).join('');
+  bindTips(el);
+  $('canalLeg').innerHTML=`<span class="ml"><span class="lg-line"></span>Realizado (cor do canal)</span>`+(parc?`<span class="ml"><span class="lg-line dash"></span>Projeção de ${low(ATUAL.nome)}</span>`:'');
+  $('lmSum').innerHTML=ANTER?`<span class="delta up">${up} em alta</span>${rt?`<span class="delta flat">${rt} no ritmo de superar</span>`:''}<span class="delta down">${dn} em queda</span>`:'';
+  $('canalObs').textContent=`Cada mini gráfico tem escala própria, começando em zero, para que todos os canais fiquem visíveis; compare tamanhos pelos valores escritos. A etiqueta compara ${low(ATUAL.nome)} com ${ANTER?low(ANTER.nome):'o mês anterior'}. Cristiana reúne Agendamento Cristiana (setembro) e Indicação Cristiana (outubro).`;
+}
+
+/* ==================== TEXTOS ==================== */
 function renderTexts(){
   const nomes=MESES.map(m=>m.nome);
   const periodo=MESES.length>2?`${nomes[0]} a ${low(nomes[nomes.length-1])}`:joinPt(nomes.map((n,i)=>i?low(n):n));
   const corte=isParc(ATUAL)?` · ${low(ATUAL.nome)} parcial, dados até ${ATUAL.corte}/${ANO}`:'';
   $('heroDt').textContent=`${periodo} de ${ANO}${corte}`;
-  let sub='Acompanhamento da evolução do faturamento por origem do lead. ';
-  if(ANTER){const pa=totV(ANTER.k)/META_MES*100;sub+=`${ANTER.nome} fechou ${pa>=100?'acima':'abaixo'} da meta (${pct(pa)}). `;}
-  sub+=isParc(ATUAL)?`${ATUAL.nome} segue em andamento, com projeção de ${milK(projV(ATUAL.k))} mantendo o ritmo atual. `:`${ATUAL.nome} fechou com ${pct(totV(ATUAL.k)/META_MES*100)} da meta. `;
-  $('heroSub').textContent=sub+'Meta mensal da clínica de R$ 300 mil.';
+  const batidas=MESES.filter(m=>!isParc(m)&&totV(m.k)>=META_MES).length, fech=MESES.filter(m=>!isParc(m)).length;
+  let sub=`Evolução do faturamento por origem do lead. Meta mensal de R$ 300 mil, batida em ${batidas} de ${fech} ${fech===1?'mês fechado':'meses fechados'}. `;
+  sub+=isParc(ATUAL)?`${ATUAL.nome} segue em andamento, com projeção de ${milK(projV(ATUAL.k))}.`:`${ATUAL.nome} fechou em ${brl(totV(ATUAL.k))}, ${pct(totV(ATUAL.k)/META_MES*100)} da meta.`;
+  $('heroSub').textContent=sub;
   $('footSpan').textContent=`Faturamento de Leads · ${low(periodo)} de ${ANO}${isParc(ATUAL)?' · '+low(ATUAL.nome)+' parcial':''}`;
   $('insH2').textContent=`Leitura rápida de ${low(ATUAL.nome)}`;
   if(ANTER){
-    $('compH2').textContent=`${ANTER.nome} frente a ${low(ATUAL.nome)}`;
-    $('compP').textContent=`Comparação direta entre os dois últimos meses${isParc(ATUAL)?`. Como ${low(ATUAL.nome)} ainda está em andamento, os cards mostram quanto ele já representa de ${low(ANTER.nome)} e a projeção para o mês completo`:''}.`;
-    $('canalP').textContent=`Faturamento de cada canal de origem mês a mês em gráfico de linha, para enxergar ganho ou perda. Linha subindo indica crescimento; descendo, queda. Ordenado pelo faturamento acumulado.`;
-  }
+    $('compH2').textContent=`${ATUAL.nome} frente a ${low(ANTER.nome)}`;
+    $('compP').textContent=`Sempre o mês atual comparado ao anterior, para a leitura não pesar conforme os meses forem chegando. A evolução completa está no gráfico do topo.`;
+    $('compRec').textContent=`${ANTER.nome} → ${ATUAL.nome}`;
+  }else $('comparativo').style.display='none';
+  $('origP').textContent=`Ranking do mês atual e a evolução de cada canal mês a mês.`;
 }
 
 /* ==================== SEÇÕES ==================== */
-function renderMonths(){
-  $('months').innerHTML=MESES.map(m=>{
-    const tv=totV(m.k),tq=totQ(m.k),tk=tq?tv/tq:0,pm=tv/META_MES*100,p=isParc(m);
-    const st=p?'<span class="st parc">Parcial</span>':(pm>=100?'<span class="st ok">Meta batida</span>':'<span class="st fech">Fechado</span>');
-    const extra=p?`<div class="rw"><span>Dias apurados</span><b>${m.apurados} de ${m.dias}</b></div><div class="rw pj"><span>Projeção do mês</span><b>${brl(projV(m.k))}</b></div>`:'';
-    return `<div class="mcard"><div class="mh"><span class="mn">${m.nome}</span>${st}</div>
-      <div class="big">${brl(tv)}</div>
-      <div class="rows">
-        <div class="rw"><span>Leads</span><b>${nf0(tq)}</b></div>
-        <div class="rw"><span>Ticket médio</span><b>${brl(tk)}</b></div>
-        <div class="rw"><span>% da meta</span><b>${pct(pm)}</b></div>${extra}
-      </div>
-      <div class="metabar"><div class="fl" style="--w:${Math.min(pm,100).toFixed(1)}%"></div></div>
-      <div class="cap">Meta de ${milK(META_MES)}${p?` · dados até ${m.corte}`:''}</div>
-    </div>`;
-  }).join('');
-}
 const IC={
   top:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>',
   up:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>',
   tk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-  off:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
+  dn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l6 6 4-4 8 8"/><path d="M14 17h7v-7"/></svg>'
 };
 function renderInsights(){
-  const c=ATUAL.k, p=ANTER?ANTER.k:null, tot=totV(c), cards=[];
+  const c=ATUAL.k,p=ANTER?ANTER.k:null,tot=totV(c),tq=totQ(c),parc=isParc(ATUAL),f=parc?ATUAL.dias/ATUAL.apurados:1;
   const ativos=ORIGENS.filter(o=>vOf(o,c)>0);
+  const li=(o,val,ch)=>`<li><span class="nm"><i style="background:${cssv(o.c)}"></i>${o.k}</span><span class="rv"><b>${val}</b>${ch||''}</span></li>`;
+  const cards=[];
   const top=[...ativos].sort((a,b)=>vOf(b,c)-vOf(a,c))[0];
-  if(top)cards.push({ic:IC.top,k:`Maior canal de ${low(ATUAL.nome)}`,v:top.k,d:`${brl(vOf(top,c))} · ${pct(vOf(top,c)/tot*100)} do faturamento do mês.`,bar:cssv(top.c)});
+  if(top){const a=p?vOf(top,p):0;
+    cards.push({ic:IC.top,k:`Maior canal de ${low(ATUAL.nome)}`,v:top.k,bar:cssv(top.c),list:`<li><span>Faturamento</span><span class="rv"><b>${brl(vOf(top,c))}</b></span></li><li><span>Participação no mês</span><span class="rv"><b>${pct(vOf(top,c)/tot*100)}</b></span></li><li><span>Leads fechados</span><span class="rv"><b>${qOf(top,c)}</b></span></li>${p?`<li><span>Frente a ${low(ANTER.nome)}</span><span class="rv">${chip(a,vOf(top,c),parc,vOf(top,c)*f)}</span></li>`:''}`});}
   if(p){
-    const sup=ativos.filter(o=>vOf(o,c)>=vOf(o,p)&&vOf(o,p)>0);
-    cards.push({ic:IC.up,k:`${isParc(ATUAL)?'Já superou':'Superou'} ${low(ANTER.nome)}`,v:sup.length?joinPt(sup.map(o=>o.k)):'Nenhum canal ainda',
-      d:sup.length?sup.map(o=>`${o.k}: ${brl(vOf(o,c))} contra ${brl(vOf(o,p))}`).join('. ')+'.':`Nenhum canal atingiu o valor de ${low(ANTER.nome)} até agora.`,bar:cssv('--pos')});
+    const upL=ORIGENS.filter(o=>vOf(o,c)>0&&vOf(o,c)>=vOf(o,p)).sort((a,b)=>(vOf(b,c)-vOf(b,p))-(vOf(a,c)-vOf(a,p)));
+    cards.push({ic:IC.up,k:`Cresceram frente a ${low(ANTER.nome)}`,v:upL.length?`${upL.length} ${upL.length===1?'canal':'canais'}`:'Nenhum ainda',bar:cssv('--pos'),
+      list:upL.map(o=>li(o,kfmt(vOf(o,c)),chip(vOf(o,p),vOf(o,c)))).join('')||`<li><span>Nenhum canal superou ${low(ANTER.nome)} até agora.</span></li>`,
+      note:'Valores do mês atual e crescimento sobre o mês anterior.'});
   }
   const tks=ativos.filter(o=>qOf(o,c)>0).map(o=>({o,t:vOf(o,c)/qOf(o,c)})).sort((a,b)=>b.t-a.t);
-  if(tks[0])cards.push({ic:IC.tk,k:'Maior ticket médio',v:tks[0].o.k,d:`${brl(tks[0].t)} por lead, em ${qOf(tks[0].o,c)} ${qOf(tks[0].o,c)===1?'lead':'leads'}. Média geral do mês: ${brl(tot/totQ(c))}.`,bar:cssv(tks[0].o.c)});
-  const sem=ORIGENS.filter(o=>vOf(o,c)===0);
-  cards.push({ic:IC.off,k:`Sem fechamento em ${low(ATUAL.nome)}`,v:sem.length?`${sem.length} ${sem.length===1?'canal':'canais'}`:'Todos ativos',d:sem.length?joinPt(sem.map(o=>o.k))+(isParc(ATUAL)?', ainda sem fechamentos no mês.':'.'):'Todos os canais registraram fechamento no mês.',bar:cssv('--neg')});
-  $('ins').innerHTML=cards.map(x=>`<div class="icard" style="--bar:${x.bar}"><div class="ik">${x.ic}${x.k}</div><div class="iv">${x.v}</div><div class="id">${x.d}</div></div>`).join('');
+  if(tks[0]){const g=tot/tq;
+    cards.push({ic:IC.tk,k:'Maior ticket médio',v:tks[0].o.k,bar:cssv(tks[0].o.c),list:`<li><span>Ticket médio do canal</span><span class="rv"><b>${brl(tks[0].t)}</b></span></li><li><span>Leads fechados</span><span class="rv"><b>${qOf(tks[0].o,c)}</b></span></li><li><span>Ticket médio geral do mês</span><span class="rv"><b>${brl(g)}</b></span></li><li><span>Acima da média geral</span><span class="rv"><span class="delta up">▲ ${pct((tks[0].t/g-1)*100)}</span></span></li>`});}
+  if(p){
+    const dnL=ORIGENS.filter(o=>vOf(o,p)>0&&(parc?vOf(o,c)*f:vOf(o,c))<vOf(o,p)).sort((a,b)=>(vOf(a,c)/vOf(a,p))-(vOf(b,c)/vOf(b,p)));
+    cards.push({ic:IC.dn,k:'Pontos de atenção',v:dnL.length?`${dnL.length} ${dnL.length===1?'canal em queda':'canais em queda'}`:'Nenhum canal em queda',bar:cssv('--neg'),
+      list:dnL.map(o=>li(o,kfmt(vOf(o,c)),chip(vOf(o,p),vOf(o,c),parc,vOf(o,c)*f))).join('')||'<li><span>Todos os canais mantiveram ou superaram o mês anterior.</span></li>',
+      note:parc?`Avaliado pela projeção, já que ${low(ATUAL.nome)} ainda está em andamento.`:`Canais abaixo do resultado de ${low(ANTER.nome)}.`});
+  }
+  $('ins').innerHTML=cards.map(x=>`<div class="icard" style="--bar:${x.bar}"><div class="ik">${x.ic}${x.k}</div><div class="iv">${x.v}</div><ul class="il">${x.list}</ul>${x.note?`<div class="note">${x.note}</div>`:''}</div>`).join('');
 }
 function renderComp(){
-  const el=$('comp'); if(!ANTER){el.style.display='none';return;}
+  if(!ANTER)return;
   const a=ANTER.k,b=ATUAL.k,p=isParc(ATUAL);
-  const sv=totV(a),ov=totV(b),sq=totQ(a),oq=totQ(b),sk=sv/sq,ok=oq?ov/oq:0;
-  const mets=[
-    {l:'Faturamento',s:brl(sv),o:brl(ov),r:ov/sv*100,pj:p?{t:brl(projV(b)),r:projV(b)/sv*100}:null},
-    {l:'Leads fechados',s:nf0(sq)+' leads',o:nf0(oq)+' leads',r:oq/sq*100,pj:p?{t:nf0(projQ(b))+' leads',r:projQ(b)/sq*100}:null},
-    {l:'Ticket médio',s:brl(sk),o:brl(ok),r:ok/sk*100,pj:null}
+  const va=totV(a),vb=totV(b),qa=totQ(a),qb=totQ(b),ta=va/qa,tb=qb?vb/qb:0;
+  const cha=ORIGENS.filter(o=>vOf(o,a)>0).length,chb=ORIGENS.filter(o=>vOf(o,b)>0).length;
+  const varPct=(x,y,proj)=>{if(p&&proj!=null)return proj>=x?`<span class="delta up">▲ ${pct((proj/x-1)*100)} proj.</span>`:`<span class="delta down">▼ ${pct((1-proj/x)*100)} proj.</span>`;
+    if(Math.abs(y/x-1)<.0005)return '<span class="delta flat">= estável</span>';return y>=x?`<span class="delta up">▲ ${pct((y/x-1)*100)}</span>`:`<span class="delta down">▼ ${pct((1-y/x)*100)}</span>`;};
+  const pp=(x,y)=>{const d=y-x;return Math.abs(d)<.05?'<span class="delta flat">= estável</span>':`<span class="delta ${d>0?'up':'down'}">${d>0?'▲ +':'▼ '}${Math.abs(d).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})} p.p.</span>`;};
+  const rows=[
+    ['Faturamento',brl(va),brl(vb),varPct(va,vb,p?projV(b):null)],
+    ['% da meta',pct(va/META_MES*100),pct(vb/META_MES*100),p?`<span class="delta flat">proj. ${pct(projV(b)/META_MES*100)}</span>`:pp(va/META_MES*100,vb/META_MES*100)],
+    ['Leads fechados',nf0(qa),nf0(qb),varPct(qa,qb,p?projQ(b):null)],
+    ['Ticket médio',brl(ta),brl(tb),varPct(ta,tb,null)],
+    ['Canais com fechamento',`${cha} de ${ORIGENS.length}`,`${chb} de ${ORIGENS.length}`,chb===cha?'<span class="delta flat">= estável</span>':`<span class="delta ${chb>cha?'up':'down'}">${chb>cha?'▲ +':'▼ '}${chb-cha}</span>`]
   ];
-  const seta='<svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-  el.innerHTML=mets.map(m=>{
-    let chip;
-    if(p&&m.l!=='Ticket médio')chip=`<span class="delta flat">${pct(m.r)} de ${low(ANTER.nome)}</span><span class="cap">mês em andamento</span>`;
-    else{const d=m.r-100,up=d>=0;chip=Math.abs(d)<0.05?`<span class="delta flat">= estável</span><span class="cap">mesmo resultado de ${low(ANTER.nome)}</span>`:`<span class="delta ${up?'up':'down'}">${up?'▲':'▼'} ${pct(Math.abs(d))}</span><span class="cap">variação frente a ${low(ANTER.nome)}</span>`;}
-    return `<div class="ccard"><div class="cl">${m.l}</div>
-      <div class="pair"><div class="mo a"><span class="mlab">${ANTER.nome}</span><b>${m.s}</b></div>${seta}<div class="mo b"><span class="mlab">${ATUAL.nome}${p?' · parcial':''}</span><b>${m.o}</b></div></div>
-      ${m.pj?`<div class="pjl">Projeção do mês: <b>${m.pj.t}</b> (${pct(m.pj.r)} de ${low(ANTER.nome)})</div>`:''}
-      <div class="dl">${chip}</div></div>`;
-  }).join('');
+  const ca=cpTot(a),cb=cpTot(b),xa=convOf(a),xb=convOf(b);
+  if(ca!=null&&cb!=null){rows.push(['Comparecimentos',nf0(ca),nf0(cb),varPct(ca,cb,null)]);}
+  if(xa!=null&&xb!=null){rows.push(['Taxa de conversão',pct(xa),pct(xb),pp(xa,xb)]);}
+  if(p)rows.splice(1,0,['Projeção do mês','',brl(projV(b)),`<span class="delta flat">ritmo atual</span>`]);
+  $('compTbl').innerHTML=`<thead><tr><th>Indicador</th><th>${ANTER.nome}</th><th>${ATUAL.nome}${p?' (parcial)':''}</th><th>Variação</th></tr></thead><tbody>`+
+    rows.map(r=>`<tr><td class="m">${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b></td><td class="var">${r[3]}</td></tr>`).join('')+'</tbody>';
+  if(ca==null||cb==null){$('compTbl').insertAdjacentHTML('beforeend',`<tfoot><tr><td colspan="4" style="text-align:left;font-size:11.5px;color:var(--text-faint);white-space:normal">Comparecimentos e conversão entram na comparação quando os dois meses tiverem esses dados.</td></tr></tfoot>`);}
 }
 function colsMes(){
-  const el=$('colsMes');
-  const dados=MESES.map(m=>({m,v:totV(m.k),pj:isParc(m)?projV(m.k):null}));
-  const top=Math.max(...dados.map(d=>Math.max(d.v,d.pj||0)),META_MES)*1.12, plotH=270;
-  const H=v=>v/top*plotH;
+  const el=$('colsMes'), ms=MESES.slice(-2);
+  const dados=ms.map(m=>({m,v:totV(m.k),pj:isParc(m)?projV(m.k):null}));
+  const top=Math.max(...dados.map(d=>Math.max(d.v,d.pj||0)),META_MES)*1.12, plotH=250, H=v=>v/top*plotH;
   let html=`<div class="metaline" style="top:${(34+plotH-H(META_MES)).toFixed(1)}px"><span>Meta ${milK(META_MES)}</span></div>`;
   html+=dados.map(d=>{
-    const col=d.pj!=null?`linear-gradient(180deg,#f0b24e,#d9792b)`:`linear-gradient(180deg,var(--green-soft),var(--gold))`;
-    const tipH=`<b>${d.m.nome}${d.pj!=null?' (parcial)':''}</b><span>${brl(d.v)} · ${pct(d.v/META_MES*100)} da meta${d.pj!=null?`<br>Projeção: ${brl(d.pj)} (${pct(d.pj/META_MES*100)} da meta)`:''}</span>`;
-    const inside=H(d.v)>44;
-    const proj=d.pj!=null?`<div class="proj" style="height:${H(d.pj).toFixed(1)}px" ${tipAttr(`<b>Projeção de ${low(d.m.nome)}</b><span>Estimativa de fechamento mantendo o ritmo atual: ${brl(d.pj)} (${pct(d.pj/META_MES*100)} da meta)</span>`)}><span>Projeção ${milK(d.pj)}</span></div>`:'';
-    return `<div class="colgrp"><div class="cstack" style="height:${H(Math.max(d.v,d.pj||0)).toFixed(1)}px">${proj}<div class="bar${inside?' inproj':''}" style="--h:${H(d.v).toFixed(1)}px;background:${col}" ${tipAttr(tipH)}><span class="top">${milK(d.v)}</span></div></div>
+    const col=d.pj!=null?'linear-gradient(180deg,#f0b24e,#d9792b)':'linear-gradient(180deg,var(--green-soft),var(--gold))';
+    const proj=d.pj!=null?`<div class="proj" style="height:${H(d.pj).toFixed(1)}px" ${tipAttr(`<b>Projeção de ${low(d.m.nome)}</b><span>${brl(d.pj)} (${pct(d.pj/META_MES*100)} da meta)</span>`)}><span>Projeção ${milK(d.pj)}</span></div>`:'';
+    return `<div class="colgrp"><div class="cstack" style="height:${H(Math.max(d.v,d.pj||0)).toFixed(1)}px">${proj}<div class="bar${H(d.v)>44?' inproj':''}" style="--h:${H(d.v).toFixed(1)}px;background:${col}" ${tipAttr(`<b>${d.m.nome}</b><span>${brl(d.v)} · ${pct(d.v/META_MES*100)} da meta</span>`)}><span class="top">${milK(d.v)}</span></div></div>
       <div class="cap">${d.m.nome}<small>${d.pj!=null?'parcial · ':''}${pct(d.v/META_MES*100)} da meta</small></div></div>`;
   }).join('');
   el.innerHTML=html; bindTips(el);
-  $('colsLeg').innerHTML=`<span><i style="background:linear-gradient(90deg,var(--green-soft),var(--gold))"></i>Mês fechado</span>`+
-    (MESES.some(isParc)?`<span><i style="background:linear-gradient(90deg,#f0b24e,#d9792b)"></i>Mês em andamento (apurado)</span><span><i style="border:2px dashed var(--c-out);background:transparent"></i>Projeção linear do mês</span>`:'')+
-    `<span><i style="border-top:2px dashed var(--accent);height:0;border-radius:0"></i>Meta mensal</span>`;
-  const pe=$('pjExplain'), mp=MESES.find(isParc);
-  if(!mp){pe.style.display='none';return;}
+  const temP=ms.some(isParc);
+  $('colsLeg').innerHTML=`<span><i style="background:linear-gradient(90deg,var(--green-soft),var(--gold))"></i>Mês fechado</span>`+(temP?`<span><i style="background:linear-gradient(90deg,#f0b24e,#d9792b)"></i>Em andamento</span><span><i style="border:2px dashed var(--c-out);background:transparent"></i>Projeção</span>`:'')+`<span><i style="border-top:2px dashed var(--accent);height:0;border-radius:0"></i>Meta</span>`;
+  const mp=ms.find(isParc);
+  if(!mp){$('pjBox').innerHTML='';return;}
   const tv=totV(mp.k),med=tv/mp.apurados,pj=projV(mp.k),pm=pj/META_MES*100;
-  pe.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><div>
-    <p><b>O que é a projeção (contorno tracejado laranja):</b> é uma estimativa de quanto ${low(mp.nome)} vai fechar se a clínica mantiver, até o fim do mês, o mesmo ritmo dos dias já apurados. A barra cheia é o que já entrou; o contorno mostra aonde o mês deve chegar nesse ritmo.</p>
-    <p>Cálculo: <span class="calc">${brl(tv)} ÷ ${mp.apurados} dias = ${brl(med)} por dia × ${mp.dias} dias = ${brl(pj)}</span>, o que equivale a ${pct(pm)} da meta.</p>
-    <p>Não é um valor garantido: muda a cada atualização semanal e sobe se o ritmo de fechamentos acelerar.${pm<100?' Hoje ela fica abaixo da linha da meta, ou seja, para bater os R$ 300 mil o ritmo precisa aumentar.':' Hoje ela passa da linha da meta, ou seja, mantido o ritmo, a meta será batida.'}</p></div>`;
+  $('pjBox').innerHTML=`<details class="pjx"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>O que é a projeção?</summary><div class="b">
+    <p>Estimativa de quanto ${low(mp.nome)} fecha se o ritmo dos dias já apurados se mantiver até o fim do mês.</p>
+    <p>Cálculo: <span class="calc">${brl(tv)} ÷ ${mp.apurados} dias × ${mp.dias} dias = ${brl(pj)}</span> (${pct(pm)} da meta). Não é valor garantido e muda a cada atualização.</p></div></details>`;
 }
 function gauge(){
   const el=$('gauge'), mk=sel.meta, pm=totV(mk)/META_MES*100, p=isParc(M[mk]);
   const W=380,H=230,cx=190,cy=192,R=150,sw=28,sc=120;
   const th=f=>Math.PI*(1-f), pt=f=>[cx+R*Math.cos(th(f)),cy-R*Math.sin(th(f))];
   const arc=(fA,fB)=>{const [x0,y0]=pt(fA),[x1,y1]=pt(fB);return `M ${x0.toFixed(2)} ${y0.toFixed(2)} A ${R} ${R} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`;};
-  const fVal=Math.min(pm,sc)/sc, fMeta=100/sc;
-  const rp=(r,f)=>[cx+r*Math.cos(th(f)),cy-r*Math.sin(th(f))];
+  const fVal=Math.min(pm,sc)/sc, fMeta=100/sc, rp=(r,f)=>[cx+r*Math.cos(th(f)),cy-r*Math.sin(th(f))];
   const [mx1,my1]=rp(R-sw/2-4,fMeta),[mx2,my2]=rp(R+sw/2+6,fMeta);
   let pj='';
   if(p){const fp=Math.min(projV(mk)/META_MES*100,sc)/sc,[px1,py1]=rp(R-sw/2-2,fp),[px2,py2]=rp(R+sw/2+2,fp),[tx,ty]=rp(R+sw/2+16,fp);
-    pj=`<line x1="${px1.toFixed(1)}" y1="${py1.toFixed(1)}" x2="${px2.toFixed(1)}" y2="${py2.toFixed(1)}" stroke="${cssv('--c-out')}" stroke-width="3" stroke-linecap="round"/>
-    <text x="${tx.toFixed(1)}" y="${(ty-2).toFixed(1)}" text-anchor="middle" fill="${cssv('--c-out')}" font-size="11" font-weight="800" font-family="Manrope,system-ui,sans-serif">Projeção</text>`;}
+    pj=`<line x1="${px1.toFixed(1)}" y1="${py1.toFixed(1)}" x2="${px2.toFixed(1)}" y2="${py2.toFixed(1)}" stroke="${cssv('--c-out')}" stroke-width="3" stroke-linecap="round"/><text x="${tx.toFixed(1)}" y="${(ty-2).toFixed(1)}" text-anchor="middle" fill="${cssv('--c-out')}" font-size="11" font-weight="800" font-family="${FONT}">Projeção</text>`;}
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Medidor de meta: ${pct(pm)}">
     <defs><linearGradient id="gg-${mk}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${cssv('--green')}"/><stop offset="1" stop-color="${cssv('--gold')}"/></linearGradient></defs>
     <path class="gauge-arc" d="${arc(0,1)}" stroke="${cssv('--track')}" stroke-width="${sw}"/>
-    <path class="gauge-arc val" d="${arc(0,Math.max(fVal,.001))}" stroke="url(#gg-${mk})" stroke-width="${sw}"/>
-    ${pj}
+    <path class="gauge-arc val" d="${arc(0,Math.max(fVal,.001))}" stroke="url(#gg-${mk})" stroke-width="${sw}"/>${pj}
     <line x1="${mx1.toFixed(1)}" y1="${my1.toFixed(1)}" x2="${mx2.toFixed(1)}" y2="${my2.toFixed(1)}" stroke="${cssv('--accent')}" stroke-width="2.4" stroke-dasharray="3 3"/>
-    <text x="${mx2.toFixed(1)}" y="${(my2-8).toFixed(1)}" text-anchor="middle" fill="${cssv('--accent')}" font-size="11" font-weight="800" font-family="Manrope">Meta</text>
+    <text x="${mx2.toFixed(1)}" y="${(my2-8).toFixed(1)}" text-anchor="middle" fill="${cssv('--accent')}" font-size="11" font-weight="800" font-family="${FONT}">Meta</text>
     <text x="${cx}" y="${cy-26}" text-anchor="middle" fill="${cssv('--brand')}" font-size="48" font-weight="700" font-family="'Cormorant Garamond',serif">${pct(pm)}</text>
-    <text x="${cx}" y="${cy-6}" text-anchor="middle" fill="${cssv('--text-dim')}" font-size="13" font-weight="700" font-family="Manrope">da meta${p?' · parcial':''}</text>
-    <text x="${pt(0)[0].toFixed(0)}" y="${cy+22}" text-anchor="middle" fill="${cssv('--text-faint')}" font-size="11" font-weight="700" font-family="Manrope">0%</text>
-    <text x="${pt(1)[0].toFixed(0)}" y="${cy+22}" text-anchor="middle" fill="${cssv('--text-faint')}" font-size="11" font-weight="700" font-family="Manrope">120%</text>
-  </svg>`;
+    <text x="${cx}" y="${cy-6}" text-anchor="middle" fill="${cssv('--text-dim')}" font-size="13" font-weight="700" font-family="${FONT}">da meta${p?' · parcial':''}</text>
+    <text x="${pt(0)[0].toFixed(0)}" y="${cy+22}" text-anchor="middle" fill="${cssv('--text-faint')}" font-size="11" font-weight="700" font-family="${FONT}">0%</text>
+    <text x="${pt(1)[0].toFixed(0)}" y="${cy+22}" text-anchor="middle" fill="${cssv('--text-faint')}" font-size="11" font-weight="700" font-family="${FONT}">120%</text></svg>`;
 }
 function renderGaugeBlock(){
   const mk=sel.meta,m=M[mk],tv=totV(mk),pm=tv/META_MES*100,p=isParc(m);
@@ -790,187 +932,94 @@ function renderGaugeBlock(){
 }
 function metaMonth(){
   const el=$('metaMonth');
-  el.innerHTML=MESES.map(m=>{
+  el.innerHTML=MESES.slice(-6).map(m=>{
     const tv=totV(m.k),pm=tv/META_MES*100,p=isParc(m);
-    const tipH=`<b>${m.nome}${p?' (parcial)':''}</b><span>${brl(tv)} · ${pct(pm)} da meta</span>`;
-    return `<div class="mm-row"><div class="lbl">${m.nome}</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(Math.min(pm,120)/120*100).toFixed(1)}%;background:${cssv(m.cor)}" ${tipAttr(tipH)}></div></div><div class="mm-marker"></div></div><div class="mm-val">${pct(pm)}</div></div>`;
+    return `<div class="mm-row"><div class="lbl">${m.nome}</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(Math.min(pm,120)/120*100).toFixed(1)}%;background:${pm>=100?cssv('--pos'):cssv(p?'--c-out':'--neg')}" ${tipAttr(`<b>${m.nome}${p?' (parcial)':''}</b><span>${brl(tv)} · ${pct(pm)} da meta</span>`)}></div></div><div class="mm-marker"></div></div><div class="mm-val">${pct(pm)}</div></div>`;
   }).join('');
   bindTips(el);
 }
 function renderRitmo(){
-  const box=$('ritmoBox'), m=ATUAL;
-  if(!isParc(m)){
-    const tv=totV(m.k),D=m.dias,media=tv/D,nec=META_MES/D,mx=Math.max(media,nec),dif=(media/nec-1)*100;
-    box.style.display='';
-    box.innerHTML=`<h4>Fechamento de ${low(m.nome)} <small>mês completo, ${D} dias</small></h4>
-      <div class="rgrid">
-        <div class="rst"><div class="l">Faturamento do mês</div><div class="v g">${brl(tv)}</div><div class="s">${pct(tv/META_MES*100)} da meta</div></div>
-        <div class="rst"><div class="l">${tv>=META_MES?'Superávit':'Faltou para a meta'}</div><div class="v">${brl(Math.abs(tv-META_MES))}</div><div class="s">${tv>=META_MES?'acima':'abaixo'} dos R$ 300 mil</div></div>
-        <div class="rst"><div class="l">Média diária realizada</div><div class="v g">${brl(media)}</div><div class="s">por dia corrido</div></div>
-        <div class="rst"><div class="l">Média necessária</div><div class="v">${brl(nec)}</div><div class="s">por dia, para a meta</div></div>
-      </div>
-      <div class="metamonth rbars">
-        <div class="mm-row"><div class="lbl">Realizado</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(media/mx*100).toFixed(1)}%;background:${cssv(m.cor)}"></div></div></div><div class="mm-val">${milK1(media)}/dia</div></div>
-        <div class="mm-row"><div class="lbl">Necessário</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(nec/mx*100).toFixed(1)}%;background:${cssv('--gold')}"></div></div></div><div class="mm-val">${milK1(nec)}/dia</div></div>
-      </div>
-      <div class="rmsg">${dif>=0?`${m.nome} fechou com média diária <b>${pct(dif)} acima</b> da necessária para a meta.`:`${m.nome} fechou com média diária <b>${pct(-dif)} abaixo</b> da necessária para a meta.`}</div>`;
-    return;
+  const box=$('ritmoBox'), m=ATUAL, tv=totV(m.k), D=m.dias;
+  const bars=(a,b,la,lb,ca)=>{const mx=Math.max(a,b);return `<div class="metamonth rbars"><div class="mm-row"><div class="lbl">${la}</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(a/mx*100).toFixed(1)}%;background:${ca}"></div></div></div><div class="mm-val">${milK1(a)}/dia</div></div><div class="mm-row"><div class="lbl">${lb}</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(b/mx*100).toFixed(1)}%;background:${cssv('--gold')}"></div></div></div><div class="mm-val">${milK1(b)}/dia</div></div></div>`;};
+  if(isParc(m)){
+    const d=m.apurados,rest=D-d,media=tv/d,nec=rest>0?Math.max(0,META_MES-tv)/rest:0,proj=projV(m.k),aum=nec>media?(nec/media-1)*100:0;
+    box.innerHTML=`<h4>Ritmo de ${low(m.nome)} <small>dados até ${m.corte}/${ANO}</small></h4>
+      <div class="rgrid"><div class="rst"><div class="l">Dias apurados</div><div class="v g">${d} de ${D}</div><div class="s">${rest} dias restantes</div></div>
+      <div class="rst"><div class="l">Projeção do mês</div><div class="v">${brl(proj)}</div><div class="s">${pct(proj/META_MES*100)} da meta</div></div></div>
+      ${bars(media,nec,'Atual','Necessário',cssv(m.cor))}
+      <div class="rmsg">${aum>0?`Para bater a meta, o ritmo diário precisa subir <b>${pct(aum)}</b> nos ${rest} dias restantes.`:'O ritmo atual já é suficiente para bater a meta do mês.'}</div>`;
+  }else{
+    const media=tv/D,nec=META_MES/D,dif=(media/nec-1)*100;
+    box.innerHTML=`<h4>Ritmo de ${low(m.nome)} <small>mês completo, ${D} dias</small></h4>
+      <div class="rgrid"><div class="rst"><div class="l">Média diária realizada</div><div class="v g">${brl(media)}</div><div class="s">por dia corrido</div></div>
+      <div class="rst"><div class="l">Média necessária</div><div class="v">${brl(nec)}</div><div class="s">por dia, para a meta</div></div></div>
+      ${bars(media,nec,'Realizado','Necessário',cssv(m.cor))}
+      <div class="rmsg">${m.nome} fechou com média diária <b>${pct(Math.abs(dif))} ${dif>=0?'acima':'abaixo'}</b> da necessária para a meta.</div>`;
   }
-  const tv=totV(m.k),d=m.apurados,D=m.dias,rest=D-d,media=tv/d,falta=Math.max(0,META_MES-tv),nec=rest>0?falta/rest:0,proj=projV(m.k);
-  const mx=Math.max(media,nec);
-  const aum=nec>media?(nec/media-1)*100:0;
-  box.innerHTML=`<h4>Ritmo de ${low(m.nome)} <small>estimativa com dados até ${m.corte}/${ANO}</small></h4>
-    <div class="rgrid">
-      <div class="rst"><div class="l">Dias apurados</div><div class="v g">${d} de ${D}</div><div class="s">${rest} dias restantes</div></div>
-      <div class="rst"><div class="l">Projeção do mês</div><div class="v">${brl(proj)}</div><div class="s">${pct(proj/META_MES*100)} da meta, no ritmo atual</div></div>
-      <div class="rst"><div class="l">Média diária atual</div><div class="v g">${brl(media)}</div><div class="s">por dia corrido</div></div>
-      <div class="rst"><div class="l">Ritmo necessário</div><div class="v">${brl(nec)}</div><div class="s">por dia, para bater a meta</div></div>
-    </div>
-    <div class="metamonth rbars" id="ritmoBars">
-      <div class="mm-row"><div class="lbl">Atual</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(media/mx*100).toFixed(1)}%;background:${cssv(m.cor)}"></div></div></div><div class="mm-val">${milK1(media)}/dia</div></div>
-      <div class="mm-row"><div class="lbl">Necessário</div><div class="mm-wrap"><div class="mm-track"><div class="mm-fill" style="--w:${(nec/mx*100).toFixed(1)}%;background:${cssv('--gold')}"></div></div></div><div class="mm-val">${milK1(nec)}/dia</div></div>
-    </div>
-    <div class="rmsg">${aum>0?`Para bater a meta, o ritmo diário precisa subir <b>${pct(aum)}</b> nos ${rest} dias restantes.`:'O ritmo atual já é suficiente para bater a meta do mês.'}</div>`;
 }
 function renderOrigem(){
-  const mk=sel.origem,m=M[mk],tot=totV(mk);
-  const data=ORIGENS.filter(o=>vOf(o,mk)>0).sort((a,b)=>vOf(b,mk)-vOf(a,mk));
-  $('rankSub').textContent=`Ordenado do maior para o menor. ${m.nome}${isParc(m)?' (parcial)':''}: total de ${brl(tot)} em ${data.length} origens.`;
-  $('rankRec').textContent='R$ por origem · '+m.nome;
-  hbar('rankFat',data.map(o=>({k:o.k,v:vOf(o,mk),color:o.c})),{valFmt:brl,extraFmt:it=>` <small>${pct(it.v/tot*100)}</small>`,tipFmt:it=>brl(it.v)+' · '+pct(it.v/tot*100)+' do mês'});
-  treemap('treeFat','treeLeg',data.map(o=>({k:o.k,v:vOf(o,mk),q:qOf(o,mk),c:o.c})));
+  const c=ATUAL.k,p=ANTER?ANTER.k:null,tot=totV(c),parc=isParc(ATUAL),f=parc?ATUAL.dias/ATUAL.apurados:1;
+  const data=ORIGENS.filter(o=>vOf(o,c)>0).sort((a,b)=>vOf(b,c)-vOf(a,c));
+  $('rankH3').textContent=`Ranking de ${low(ATUAL.nome)}`;
+  $('rankRec').textContent=p?`variação frente a ${low(ANTER.nome)}`:'';
+  const sem=ORIGENS.filter(o=>vOf(o,c)===0).map(o=>o.k);
+  $('rankSub').textContent=`${ATUAL.nome}${parc?' (parcial)':''}: ${brl(tot)} em ${data.length} origens, do maior para o menor.${sem.length?` Sem fechamento: ${joinPt(sem)}.`:''}`;
+  hbar('rankFat',data.map(o=>({k:o.k,v:vOf(o,c),color:o.c,o})),{valFmt:brl,
+    extraFmt:it=>` <small>${pct(it.v/tot*100)}</small>${p?chip(vOf(it.o,p),it.v,parc,it.v*f):''}`,
+    tipFmt:it=>`${brl(it.v)} · ${pct(it.v/tot*100)} do mês${p?` · ${ANTER.nome}: ${brl(vOf(it.o,p))}`:''}`});
 }
-const kfmt=v=>v>=1000?'R$ '+(v/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+' mil':'R$ '+nf0(v);
-function lineMulti(){
-  const el=$('lineMulti'), n=MESES.length, P=ANTER?ANTER.k:null, C=ATUAL.k, parc=isParc(ATUAL);
-  const ord=P||C;
-  const data=[...ORIGENS].sort((a,b)=>(vOf(b,ord)+vOf(b,C))-(vOf(a,ord)+vOf(a,C)));
-  const W=300,H=160,pl=16,pr=16,pt=28,pb=26,iw=W-pl-pr,ih=H-pt-pb;
-  const X=i=>n===1?W/2:pl+iw*(n===2?(i?0.84:0.16):i/(n-1));
-  const fator=parc?ATUAL.dias/ATUAL.apurados:1;
-  let up=0,dn=0,rt=0;
-  el.innerHTML=data.map(o=>{
-    const col=cssv(o.c), vals=MESES.map(m=>vOf(o,m.k));
-    const pj=parc?vOf(o,C)*fator:null;
-    const top=Math.max(...vals,pj||0,1)*1.14;
-    const Y=v=>pt+ih-(v/top)*ih;
-    const pts=vals.map((v,i)=>[X(i),Y(v)]);
-    const line='M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L');
-    const area=line+` L${pts[n-1][0].toFixed(1)} ${(pt+ih).toFixed(1)} L${pts[0][0].toFixed(1)} ${(pt+ih).toFixed(1)} Z`;
-    const gid='lg'+ORIGENS.indexOf(o);
-    /* status */
-    let chip='';
-    if(P){const a=vOf(o,P),b=vOf(o,C);
-      if(a===0&&b>0){chip='<span class="delta up">▲ novo</span>';up++;}
-      else if(a===0&&b===0){chip='<span class="delta flat" style="color:var(--text-faint);background:var(--track)">sem fechamento</span>';}
-      else if(b>=a){chip=`<span class="delta up">▲ ${pct((b/a-1)*100)} acima de ${P==='set'?'set.':P}</span>`;up++;}
-      else if(!parc&&b===0){chip=`<span class="delta down">▼ sem fechamento no mês</span>`;dn++;}
-      else if(parc&&b===0){chip=`<span class="delta flat" style="color:var(--text-dim);background:var(--track)">ainda sem fechamento</span>`;dn++;}
-      else if(parc&&pj>=a){chip=`<span class="delta flat">no ritmo de superar ${ANTER.abr.toLowerCase()}.</span>`;rt++;}
-      else{chip=`<span class="delta down">▼ ${pct((1-(parc?pj:b)/a)*100)} ${parc?'na projeção':'abaixo'}</span>`;dn++;}
-    }
-    /* projeção */
-    let pjs='';
-    if(parc&&n>1){
-      const pp=[X(n-1),Y(pj)], pv=pts[n-2];
-      pjs=`<path d="M${pv[0].toFixed(1)} ${pv[1].toFixed(1)} L${pp[0].toFixed(1)} ${pp[1].toFixed(1)}" fill="none" stroke="${cssv('--c-out')}" stroke-width="1.8" stroke-dasharray="4 4" opacity=".9" class="ldot"/>
-        <circle class="ldot" cx="${pp[0].toFixed(1)}" cy="${pp[1].toFixed(1)}" r="4" fill="${cssv('--surface-2')}" stroke="${cssv('--c-out')}" stroke-width="1.8" ${tipAttr(`<b>${o.k} · projeção de ${low(ATUAL.nome)}</b><span>${brl(pj)} mantendo o ritmo atual</span>`)}/>`;
-    }
-    /* rótulos dos pontos, evitando sobreposição com a projeção */
-    const labs=vals.map((v,i)=>{
-      let y=pts[i][1]-10, anchor=i===0?'start':(i===n-1?'end':'middle'), x=pts[i][0]+(i===0?-6:(i===n-1?6:0));
-      if(parc&&i===n-1&&pj>v&&Y(v)-Y(pj)<26&&pts[i][1]+19<pt+ih-2)y=pts[i][1]+19;
-      return `<text class="ldot" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${anchor}" fill="${cssv('--text')}" font-size="11.5" font-weight="800" font-family="Manrope,system-ui,sans-serif">${kfmt(v)}</text>`;
-    }).join('');
-    let pjl='';
-    if(parc){const pp=[X(n-1),Y(pj)];pjl=`<text class="ldot" x="${(pp[0]+6).toFixed(1)}" y="${(pp[1]-9).toFixed(1)}" text-anchor="end" fill="${cssv('--c-out')}" font-size="10" font-weight="800" font-family="Manrope,system-ui,sans-serif">proj. ${kfmt(pj)}</text>`;
-      pjl='';}
-    const xl=MESES.map((m,i)=>`<text x="${X(i).toFixed(1)}" y="${H-6}" text-anchor="${i===0&&n===2?'start':(i===n-1&&n===2?'end':'middle')}" dx="${i===0&&n===2?-6:(i===n-1&&n===2?6:0)}" fill="${cssv('--text-faint')}" font-size="10.5" font-weight="700" font-family="Manrope,system-ui,sans-serif">${m.abr}${isParc(m)?' (parc.)':''}</text>`).join('');
-    const dots=pts.map((p,i)=>`<circle class="ldot" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4.5" fill="${col}" stroke="${cssv('--surface-2')}" stroke-width="2" ${tipAttr(`<b>${o.k} · ${MESES[i].nome}${isParc(MESES[i])?' (parcial)':''}</b><span>${brl(vals[i])} · ${qOf(o,MESES[i].k)} ${qOf(o,MESES[i].k)===1?'lead':'leads'}</span>`)}/>`).join('');
-    const svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.k}: ${MESES.map((m,i)=>m.nome+' '+brl(vals[i])).join(', ')}">
-      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".28"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
-      <line x1="${pl}" y1="${pt+ih}" x2="${W-pr}" y2="${pt+ih}" stroke="${cssv('--line-soft')}" stroke-width="1"/>
-      <path class="ldot" d="${area}" fill="url(#${gid})"/>
-      ${pjs}
-      <path class="ln" d="${line}" fill="none" stroke="${col}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      ${dots}${labs}${pjl}${xl}</svg>`;
-    const foot=parc?`<div class="lf"><span>${ATUAL.nome}: <b>${qOf(o,C)} ${qOf(o,C)===1?'lead':'leads'}</b></span><span class="pj">Projeção: <b>${kfmt(pj)}</b></span></div>`
-                   :`<div class="lf"><span>${ATUAL.nome}: <b>${qOf(o,C)} ${qOf(o,C)===1?'lead':'leads'}</b></span><span>${ANTER?ANTER.nome+': <b>'+qOf(o,P)+'</b>':''}</span></div>`;
-    return `<div class="lc"><div class="lh"><i style="background:${col}"></i><b>${o.k}${o.hl?' ★':''}</b></div><div class="ls">${chip}</div>${svg}${foot}</div>`;
-  }).join('');
-  bindTips(el);
-  $('canalLeg').innerHTML=`<span class="ml"><span class="lg-line" style="border-color:var(--text-dim)"></span>Realizado (cor do canal)</span>`+(parc?`<span class="ml"><span class="lg-line dash"></span>Projeção de ${low(ATUAL.nome)}</span>`:'');
-  $('lmSum').innerHTML=ANTER?`<span class="delta up">${up} em alta</span>${rt?`<span class="delta flat">${rt} no ritmo de superar</span>`:''}<span class="delta down">${dn} abaixo de ${low(ANTER.nome)}</span>`:'';
-  const sem=ORIGENS.filter(o=>vOf(o,C)===0).map(o=>o.k);
-  $('canalObs').textContent=`Cada mini gráfico tem escala própria, começando em zero, para que todos os canais fiquem visíveis; compare valores pelos rótulos. A etiqueta compara ${low(ATUAL.nome)} com ${ANTER?low(ANTER.nome):'o mês anterior'}${parc?': canais ainda abaixo são avaliados pela projeção do mês':''}.${sem.length?` Sem fechamento em ${low(ATUAL.nome)}: ${joinPt(sem)}.`:''} Cristiana reúne Agendamento Cristiana (setembro) e Indicação Cristiana (outubro).`;
-}
-function renderVolume(){
-  const mk=sel.volume,m=M[mk],tq=totQ(mk),tv=totV(mk);
-  $('qtdRec').textContent=`${tq} no total · ${m.nome}`;
-  const dq=ORIGENS.filter(o=>qOf(o,mk)>0).sort((a,b)=>qOf(b,mk)-qOf(a,mk));
-  hbar('qtdOrig',dq.map(o=>({k:o.k,v:qOf(o,mk),color:o.c})),{valFmt:v=>nf0(v)+(v===1?' lead':' leads'),tipFmt:it=>nf0(it.v)+(it.v===1?' lead':' leads')+' · '+pct(it.v/tq*100)+' do volume'});
-  const dt=dq.map(o=>({k:o.k,v:vOf(o,mk)/qOf(o,mk),color:o.c,q:qOf(o,mk)})).sort((a,b)=>b.v-a.v);
-  hbar('ticketOrig',dt,{valFmt:brl,tipFmt:it=>brl(it.v)+' por lead · '+it.q+(it.q===1?' lead':' leads')});
-  $('volObs').textContent=`Ticket médio geral de ${low(m.nome)}${isParc(m)?' (parcial)':''}: ${brl(tq?tv/tq:0)}. Origens com poucos leads de alto valor puxam o ticket para cima.`;
-}
-
 function renderConv(){
   const sec=$('conversao');
   const mm=[...MESES].reverse().find(m=>ORIGENS.some(o=>o.cp&&o.cp[m.k]!=null));
   if(!mm){sec.style.display='none';return;}
-  const k=mm.k, track=ORIGENS.filter(o=>o.cp&&o.cp[k]!=null);
-  const conv=track.filter(o=>!o.semConv);
-  const totC=track.reduce((a,o)=>a+o.cp[k],0), cC=conv.reduce((a,o)=>a+o.cp[k],0), fC=conv.reduce((a,o)=>a+qOf(o,k),0);
-  const tx=cC?fC/cC*100:0, fds=FDS[k];
+  const k=mm.k, track=ORIGENS.filter(o=>o.cp&&o.cp[k]!=null), conv=track.filter(o=>!o.semConv);
+  const totC=track.reduce((a,o)=>a+o.cp[k],0), cC=conv.reduce((a,o)=>a+o.cp[k],0), fC=conv.reduce((a,o)=>a+qOf(o,k),0), tx=cC?fC/cC*100:0, fds=FDS[k];
   $('convH2').textContent=`${mm.nome}: quem compareceu e quem fechou`;
-  $('convP').textContent=`Comparecimentos de ${low(mm.nome)}${isParc(mm)?` (parcial, até ${mm.corte})`:''} cruzados com os fechamentos do mesmo mês, por canal de origem.`;
+  $('convP').textContent=`Comparecimentos de ${low(mm.nome)}${isParc(mm)?` (até ${mm.corte})`:''} cruzados com os fechamentos do mesmo mês, por canal de origem.`;
   const I={c:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
     f:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>',
     t:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 5L5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>',
     w:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'};
-  const ks=[
-    {i:I.c,l:'Comparecimentos',v:nf0(totC),s:`em ${track.length} canais de origem`},
-    {i:I.f,l:'Fecharam',v:nf0(fC),g:1,s:`de ${nf0(cC)} comparecimentos nos canais acompanhados`},
-    {i:I.t,l:'Taxa de conversão',v:pct(tx),g:1,s:'fechamentos ÷ comparecimentos'}
-  ];
+  const ks=[{i:I.c,l:'Comparecimentos',v:nf0(totC),s:`em ${track.length} canais de origem`},{i:I.f,l:'Fecharam',v:nf0(fC),g:1,s:`de ${nf0(cC)} comparecimentos nos canais com taxa`},{i:I.t,l:'Taxa de conversão',v:pct(tx),g:1,s:'fechamentos ÷ comparecimentos'}];
   if(fds)ks.push({i:I.w,l:'Finais de semana',v:nf0(fds.n),s:`comparecimentos agendados por ${fds.resp}`});
   $('convKpis').innerHTML=ks.map(x=>`<div class="ck"><div class="l">${x.i}${x.l}</div><div class="v${x.g?' g':''}">${x.v}</div><div class="s">${x.s}</div></div>`).join('');
-  const ord=[...track].sort((a,b)=>b.cp[k]-a.cp[k]||qOf(b,k)-qOf(a,k));
-  const max=Math.max(...track.map(o=>Math.max(o.cp[k],qOf(o,k))),1);
-  $('convBars').innerHTML=ord.map(o=>{
-    const c=o.cp[k],q=qOf(o,k);
-    const ch=o.semConv?'<span class="ch delta na">fora da taxa</span>':`<span class="ch delta ${q/c>=tx/100?'up':'flat'}">${pct(c?q/c*100:0)} de conversão</span>`;
-    const row=(lab,v,col,t)=>`<div class="g1"><span class="mn">${lab}</span><div class="tk"><div class="fl" style="--w:${(v/max*100).toFixed(1)}%;background:var(${col})" ${tipAttr(`<b>${o.k}</b><span>${t}</span>`)}></div></div><span class="vv">${nf0(v)}</span></div>`;
-    return `<div class="gg"><div class="gh"><i style="background:${cssv(o.c)}"></i>${o.k}${ch}</div><div class="pair">${row('Comp.',c,'--c-comp',nf0(c)+' compareceram')}${row('Fech.',q,'--c-fech',nf0(q)+(q===1?' fechou':' fecharam')+' · '+brl(vOf(o,k)))}</div></div>`;
-  }).join('');
-  bindTips($('convBars'));
-  const rt=conv.filter(o=>o.cp[k]>0).map(o=>({k:o.k,v:qOf(o,k)/o.cp[k]*100,color:o.c,c:o.cp[k],q:qOf(o,k)})).sort((a,b)=>b.v-a.v);
-  hbar('convRate',rt,{max:100,valFmt:v=>pct(v),extraFmt:it=>` <small>${it.q}/${it.c}</small>`,tipFmt:it=>`${it.q} de ${it.c} comparecimentos fecharam (${pct(it.v)})`});
+  const maxC=Math.max(...track.map(o=>Math.max(o.cp[k],qOf(o,k))),1);
+  const ord=[...conv].sort((a,b)=>(qOf(b,k)/b.cp[k])-(qOf(a,k)/a.cp[k])||b.cp[k]-a.cp[k]).concat(track.filter(o=>o.semConv));
+  $('convBl').innerHTML=ord.map(o=>{const c=o.cp[k],q=qOf(o,k),fora=!!o.semConv,r=c?q/c*100:0;
+    const wc=c/maxC*100, wf=fora?0:Math.min(100,q/(c||1)*100);
+    const stt=fora?`<b>${q}</b>fech. · ${c} comp.<br><span class="delta flat" style="color:var(--text-faint);background:var(--track);margin-top:4px">fora da taxa</span>`:`<b>${pct(r)}</b>${q} de ${c}`;
+    return `<div class="bl-row${fora?' out':''}"><div class="nm"><i style="background:${cssv(o.c)}"></i>${o.k}</div>
+      <div class="bl-track" ${tipAttr(`<b>${o.k}</b><span>${c} compareceram · ${q} ${q===1?'fechou':'fecharam'}${fora?'':' · '+pct(r)} · ${brl(vOf(o,k))}</span>`)}><div class="bl-comp" style="--w:${wc.toFixed(1)}%"><div class="bl-fech" style="--w:${wf.toFixed(1)}%"></div></div></div>
+      <div class="stt">${stt}</div></div>`;}).join('');
+  bindTips($('convBl'));
   const fora=track.filter(o=>o.semConv).map(o=>o.k), semCp=ORIGENS.filter(o=>!(o.cp&&o.cp[k]!=null)&&qOf(o,k)>0).map(o=>o.k);
-  $('convObs').textContent=`Conversão = fechamentos do mês ÷ comparecimentos do mês no mesmo canal. Parte dos fechamentos vem de pacientes que compareceram em meses anteriores, então a taxa é uma aproximação. ${fora.length?joinPt(fora)+' fica fora da taxa, porque reúne principalmente pacientes que já estavam em tratamento e ampliaram o plano; o único comparecimento registrado foi da paciente Inúbia Melo Silva, que chegou pesquisando por IA. ':''}${semCp.length?joinPt(semCp)+' não têm comparecimentos separados na planilha. ':''}"Indicação de paciente" da planilha corresponde a Indicação paciente CRC.`;
+  $('convObs').textContent=`A taxa compara fechamentos e comparecimentos do mesmo mês; parte dos fechamentos vem de pacientes que compareceram antes, então é uma aproximação. ${fora.length?joinPt(fora)+' fica fora da taxa por reunir principalmente pacientes que já estavam em tratamento e ampliaram o plano. ':''}${semCp.length?joinPt(semCp)+' não têm comparecimentos separados na planilha. ':''}"Indicação de paciente" corresponde a Indicação paciente CRC.`;
+}
+function renderVolume(){
+  const n=MESES.length, c=ATUAL.k;
+  const ord=[...ORIGENS].sort((a,b)=>qOf(b,c)-qOf(a,c)||qOf(b,ANTER?ANTER.k:c)-qOf(a,ANTER?ANTER.k:c));
+  $('leadsRec').textContent=MESES.map(m=>`${m.abr}: ${totQ(m.k)}`).join(' · ')+' leads';
+  multiLine('volLeads','volLeadsLeg',ord.map(o=>({k:o.k,c:o.c,vals:MESES.map(m=>qOf(o,m.k)),extra:i=>` · ${brl(vOf(o,MESES[i].k))}`})),
+    {fmt:v=>nf0(v)+(Math.round(v)===1?' lead':' leads'),short:v=>nf0(v),axis:v=>nf0(v),aria:'Leads fechados por origem, mês a mês',labW:190});
+  const ordT=[...ORIGENS].sort((a,b)=>{const ta=qOf(a,c)?vOf(a,c)/qOf(a,c):-1,tb=qOf(b,c)?vOf(b,c)/qOf(b,c):-1;return tb-ta;});
+  multiLine('volTicket','volTicketLeg',ordT.map(o=>({k:o.k,c:o.c,vals:MESES.map(m=>qOf(o,m.k)?vOf(o,m.k)/qOf(o,m.k):null),extra:i=>` · ${qOf(o,MESES[i].k)} ${qOf(o,MESES[i].k)===1?'lead':'leads'}`})),
+    {fmt:v=>kfmt(v),short:v=>v>=1000?(v/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+' mil':nf0(v),axis:axK,aria:'Ticket médio por origem, mês a mês',labW:210,ref:{label:'Média geral',vals:MESES.map(m=>totQ(m.k)?totV(m.k)/totQ(m.k):null)}});
 }
 
-/* ==================== RENDER GERAL + ABAS ==================== */
-function renderAll(){renderTexts();renderMonths();renderInsights();renderComp();colsMes();renderGaugeBlock();metaMonth();renderRitmo();renderOrigem();lineMulti();renderConv();renderVolume();}
+/* ==================== RENDER + ABAS ==================== */
+function renderAll(){renderTexts();fatLine();mesTable();renderInsights();renderComp();colsMes();renderGaugeBlock();metaMonth();renderRitmo();renderOrigem();lineMulti();renderConv();renderVolume();}
 function buildTabs(){
   document.querySelectorAll('[data-tabgroup]').forEach(g=>{
-    const grp=g.dataset.tabgroup;
-    g.innerHTML=MESES.map(m=>`<button role="tab" data-mes="${m.k}" aria-selected="${m.k===sel[grp]}" tabindex="${m.k===sel[grp]?0:-1}">${m.nome}</button>`).join('');
-    const pick=b=>{
-      g.querySelectorAll('button').forEach(x=>{const on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;});
-      sel[grp]=b.dataset.mes;
-      if(grp==='meta'){renderGaugeBlock();replay('gauge');}
-      else if(grp==='origem'){renderOrigem();replay('rankFat');replay('treeFat');}
-      else{renderVolume();replay('qtdOrig');replay('ticketOrig');}
-    };
+    const grp=g.dataset.tabgroup, ms=MESES.slice(-6);
+    g.innerHTML=ms.map(m=>`<button role="tab" data-mes="${m.k}" aria-selected="${m.k===sel[grp]}" tabindex="${m.k===sel[grp]?0:-1}">${m.nome}</button>`).join('');
+    const pick=b=>{g.querySelectorAll('button').forEach(x=>{const on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;});sel[grp]=b.dataset.mes;renderGaugeBlock();replay('gauge');};
     g.addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(b);});
-    g.addEventListener('keydown',e=>{
-      if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
-      const bs=[...g.querySelectorAll('button')],i=bs.indexOf(document.activeElement);if(i<0)return;
-      const n=bs[(i+(e.key==='ArrowRight'?1:-1)+bs.length)%bs.length];n.focus();pick(n);e.preventDefault();
-    });
+    g.addEventListener('keydown',e=>{if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;const bs=[...g.querySelectorAll('button')],i=bs.indexOf(document.activeElement);if(i<0)return;const nb=bs[(i+(e.key==='ArrowRight'?1:-1)+bs.length)%bs.length];nb.focus();pick(nb);e.preventDefault();});
   });
 }
+/* gráficos responsivos: redesenha ao mudar a largura */
+let lastW=innerWidth,rT;
+addEventListener('resize',()=>{clearTimeout(rT);rT=setTimeout(()=>{if(Math.abs(innerWidth-lastW)<8)return;lastW=innerWidth;fatLine();renderVolume();['fatLine','volLeads','volTicket'].forEach(id=>chartFinal($(id)));},200);});
 
 /* ==================== INIT ==================== */
 buildTabs();
