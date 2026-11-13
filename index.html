@@ -19,7 +19,7 @@
   /* 10 cores distintas, uma por origem */
   --o-impus:#d4af37; --o-org:#2fb488; --o-raphael:#4f8fd6; --o-google:#9b6fd4;
   --o-outros:#8aa0a8; --o-crc:#e0735f; --o-captare:#33c2bd; --o-cristiana:#e8964a;
-  --o-andreza:#6f74d8; --o-caio:#d85fa6;
+  --o-andreza:#6f74d8; --o-caio:#d85fa6; --o-func:#9fc35a; --o-pac:#9a7b6c;
   /* cores de mês (ao adicionar um mês novo, criar o token dele aqui) */
   --c-set:#2fb488; --c-out:#e0863a; --c-nov:#5aa9e6; --c-dez:#c9a227;
   --ease:cubic-bezier(.22,.61,.36,1); --radius:18px;
@@ -526,23 +526,25 @@ const META_MES=300000, SUPER_MES=330000, ANO=2026;
 const MESES=[
   {k:'set', nome:'Setembro', abr:'Set', cor:'--c-set', dias:30, apurados:30},
   {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:31, corte:'31/10'},
-  {k:'nov', nome:'Novembro', abr:'Nov', cor:'--c-nov', dias:30, apurados:6,  corte:'06/11'}
+  {k:'nov', nome:'Novembro', abr:'Nov', cor:'--c-nov', dias:30, apurados:13, corte:'13/11'}
 ];
 /* Cristiana reúne "Agendamento Cristiana" (setembro) e "Indicação Cristiana" (outubro em diante).
    "Indicação de paciente" = Indicação paciente CRC. semConv = fora da taxa de conversão. */
 const ORIGENS=[
-  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}, nov:{v:35139.05,q:5}}, cp:{out:40,nov:12}},
-  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9},   nov:{v:7700.00,q:1}},  cp:{out:18,nov:1}},
-  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10},  nov:{v:13869.99,q:5}}, cp:{out:34,nov:6}},
+  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}, nov:{v:61128.28,q:10}}, cp:{out:40,nov:26}},
+  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9},   nov:{v:17435.88,q:4}},  cp:{out:18,nov:10}},
+  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10},  nov:{v:40662.34,q:11}}, cp:{out:34,nov:21}},
   {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0},          nov:{v:0,q:0}},        cp:{out:5,nov:0}},
-  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10},  nov:{v:0,q:0}},        cp:{out:1,nov:0}, semConv:1},
-  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1},    nov:{v:0,q:0}},        cp:{out:6,nov:1}},
-  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:23475.70,q:4},   nov:{v:0,q:0}},        cp:{out:6,nov:1}},
+  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10},  nov:{v:41530.33,q:5}},  cp:{out:1,nov:0}, semConv:1},
+  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1},    nov:{v:0,q:0}},        cp:{out:6,nov:4}},
+  {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:23475.70,q:4},   nov:{v:0,q:0}},        cp:{out:6,nov:2}},
   {k:'Cristiana',              c:'--o-cristiana', m:{set:{v:17482.60,q:5},  out:{v:16263.31,q:9},   nov:{v:28317.00,q:4}}},
   {k:'Agendamento Andreza',    c:'--o-andreza',   m:{set:{v:2000.00,q:2},   out:{v:16800.00,q:3},   nov:{v:0,q:0}}},
-  {k:'Indicação Doutor Caio',  c:'--o-caio',      m:{set:{v:345.00,q:1},    out:{v:0,q:0},          nov:{v:0,q:0}}}
+  {k:'Indicação Doutor Caio',  c:'--o-caio',      m:{set:{v:345.00,q:1},    out:{v:0,q:0},          nov:{v:0,q:0}}},
+  {k:'Funcionário da clínica', c:'--o-func',     m:{nov:{v:364.00,q:1}}},
+  {k:'Paciente da clínica',    c:'--o-pac',      m:{nov:{v:200.00,q:1}}},
 ];
-const FDS={out:{n:19,resp:'Verônica Cristina'},nov:{n:5,resp:'Verônica Cristina'}}; /* comparecimentos agendados para finais de semana */
+const FDS={out:{n:19,resp:'Verônica Cristina'},nov:{n:11,resp:'Verônica Cristina'}}; /* comparecimentos agendados para finais de semana */
 
 /* ==================== DERIVADOS ==================== */
 const M=Object.fromEntries(MESES.map(m=>[m.k,m]));
