@@ -338,6 +338,18 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .ck .v{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.6vw,40px);font-weight:600;line-height:1;margin-top:10px;color:var(--accent);font-variant-numeric:tabular-nums}
 .ck .v.g{color:var(--brand)}
 .ck .s{font-size:11.5px;color:var(--text-faint);margin-top:6px}
+.cmeta{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,16px);margin-top:clamp(12px,1.6vw,16px)}
+.cmeta:empty{display:none}
+.cm{padding:clamp(16px,1.9vw,20px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--line-soft)}
+.cm h4{margin:0 0 12px;font-size:13px;font-weight:700;color:var(--text);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.cm h4 span{font-weight:500;color:var(--text-faint);font-size:12px}
+.cm .bar{height:12px;border-radius:99px;background:var(--line-soft);overflow:hidden}
+.cm .bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--accent))}
+.cm .row{display:grid;grid-template-columns:90px 1fr 44px;gap:10px;align-items:center;font-size:12.5px;margin-top:10px}
+.cm .row b{text-align:right;font-variant-numeric:tabular-nums}
+.cm .nums{display:flex;justify-content:space-between;font-size:12px;color:var(--text-dim);margin-top:8px;gap:8px;flex-wrap:wrap}
+.cm .nums b{color:var(--accent)}
+@media(max-width:760px){.cmeta{grid-template-columns:1fr}}
 .bl{display:flex;flex-direction:column;gap:14px}
 .bl-row{display:grid;grid-template-columns:180px 1fr 150px;gap:14px;align-items:center}
 .bl-row .nm{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;min-width:0}
@@ -474,6 +486,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
 <section class="section" id="conversao">
   <div class="sec-h reveal"><div class="k">Comparecimento e fechamento</div><h2 id="convH2"></h2><p id="convP"></p></div>
   <div class="ckpis reveal" id="convKpis"></div>
+  <div class="cmeta reveal" id="convMeta"></div>
   <div class="panel reveal" style="margin-top:clamp(16px,2.2vw,24px)">
     <div class="panel__h"><h3>Conversão por canal</h3><span class="rec">ordenado pela taxa</span></div>
     <div class="panel__s">A barra inteira representa quem compareceu; a parte verde, quem fechou. À direita, a taxa de conversão.</div>
@@ -526,25 +539,27 @@ const META_MES=300000, SUPER_MES=330000, ANO=2026;
 const MESES=[
   {k:'set', nome:'Setembro', abr:'Set', cor:'--c-set', dias:30, apurados:30},
   {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:31, corte:'31/10'},
-  {k:'nov', nome:'Novembro', abr:'Nov', cor:'--c-nov', dias:30, apurados:13, corte:'13/11'}
+  {k:'nov', nome:'Novembro', abr:'Nov', cor:'--c-nov', dias:30, apurados:20, corte:'20/11'}
 ];
 /* Cristiana reúne "Agendamento Cristiana" (setembro) e "Indicação Cristiana" (outubro em diante).
    "Indicação de paciente" = Indicação paciente CRC. semConv = fora da taxa de conversão. */
 const ORIGENS=[
-  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}, nov:{v:61128.28,q:10}}, cp:{out:40,nov:26}},
-  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9},   nov:{v:17435.88,q:4}},  cp:{out:18,nov:10}},
-  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10},  nov:{v:40662.34,q:11}}, cp:{out:34,nov:21}},
+  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}, nov:{v:75061.58,q:12}}, cp:{out:40,nov:40}},
+  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9},   nov:{v:20621.38,q:5}},  cp:{out:18,nov:13}},
+  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10},  nov:{v:76372.68,q:15}}, cp:{out:34,nov:36}},
   {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0},          nov:{v:0,q:0}},        cp:{out:5,nov:0}},
-  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10},  nov:{v:41530.33,q:5}},  cp:{out:1,nov:0}, semConv:1},
-  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1},    nov:{v:0,q:0}},        cp:{out:6,nov:4}},
+  {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10},  nov:{v:64762.83,q:8}},  cp:{out:1,nov:0}, semConv:1},
+  {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1},    nov:{v:4219.00,q:1}},  cp:{out:6,nov:6}},
   {k:'Captare',                c:'--o-captare',   m:{set:{v:19364.72,q:5},  out:{v:23475.70,q:4},   nov:{v:0,q:0}},        cp:{out:6,nov:2}},
-  {k:'Cristiana',              c:'--o-cristiana', m:{set:{v:17482.60,q:5},  out:{v:16263.31,q:9},   nov:{v:28317.00,q:4}}},
+  {k:'Cristiana',              c:'--o-cristiana', m:{set:{v:17482.60,q:5},  out:{v:16263.31,q:9},   nov:{v:30487.00,q:6}}},
   {k:'Agendamento Andreza',    c:'--o-andreza',   m:{set:{v:2000.00,q:2},   out:{v:16800.00,q:3},   nov:{v:0,q:0}}},
   {k:'Indicação Doutor Caio',  c:'--o-caio',      m:{set:{v:345.00,q:1},    out:{v:0,q:0},          nov:{v:0,q:0}}},
   {k:'Funcionário da clínica', c:'--o-func',     m:{nov:{v:364.00,q:1}}},
   {k:'Paciente da clínica',    c:'--o-pac',      m:{nov:{v:200.00,q:1}}},
 ];
-const FDS={out:{n:19,resp:'Verônica Cristina'},nov:{n:11,resp:'Verônica Cristina'}}; /* comparecimentos agendados para finais de semana */
+const FDS={out:{n:19,resp:'Verônica Cristina'},nov:{n:22,resp:'Verônica Cristina'}};
+const CMETA={nov:120}; /* meta mensal de comparecimentos */
+const CRC={nov:[['Juliana',47],['Alisson',28]]}; /* comparecimentos por atendente do CRC */ /* comparecimentos agendados para finais de semana */
 
 /* ==================== DERIVADOS ==================== */
 const M=Object.fromEntries(MESES.map(m=>[m.k,m]));
@@ -1019,6 +1034,10 @@ function renderConv(){
     w:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'};
   const ks=[{i:I.c,l:'Comparecimentos',v:nf0(totC),s:`em ${track.length} canais de origem`},{i:I.f,l:'Fecharam',v:nf0(fC),g:1,s:`de ${nf0(cC)} comparecimentos nos canais com taxa`},{i:I.t,l:'Taxa de conversão',v:pct(tx),g:1,s:'fechamentos ÷ comparecimentos'}];
   if(fds)ks.push({i:I.w,l:'Finais de semana',v:nf0(fds.n),s:`comparecimentos agendados por ${fds.resp}`});
+  { const mt=CMETA[k], crc=CRC[k]; let h='';
+    if(mt){const p=totC/mt*100; h+=`<div class="cm"><h4>Meta de comparecimentos <span>${mm.nome}${isParc(mm)?' (parcial)':''}</span></h4><div class="bar"><i style="width:${Math.min(p,100)}%"></i></div><div class="nums"><span><b>${nf0(totC)}</b> de ${nf0(mt)} (${pct(p)})</span><span>${totC>=mt?'meta atingida':`faltam <b>${nf0(mt-totC)}</b>`}</span></div></div>`;}
+    if(crc&&crc.length){const tt=crc.reduce((a,x)=>a+x[1],0), mx=Math.max(...crc.map(x=>x[1])); h+=`<div class="cm"><h4>Comparecimentos por atendente do CRC <span>total ${nf0(tt)}</span></h4>${crc.map(x=>`<div class="row"><span>${x[0]}</span><div class="bar"><i style="width:${x[1]/mx*100}%"></i></div><b>${nf0(x[1])}</b></div>`).join('')}</div>`;}
+    $('convMeta').innerHTML=h; }
   $('convKpis').innerHTML=ks.map(x=>`<div class="ck"><div class="l">${x.i}${x.l}</div><div class="v${x.g?' g':''}">${x.v}</div><div class="s">${x.s}</div></div>`).join('');
   const maxC=Math.max(...track.map(o=>Math.max(o.cp[k],qOf(o,k))),1);
   const ord=[...conv].sort((a,b)=>(qOf(b,k)/b.cp[k])-(qOf(a,k)/a.cp[k])||b.cp[k]-a.cp[k]).concat(track.filter(o=>o.semConv));
