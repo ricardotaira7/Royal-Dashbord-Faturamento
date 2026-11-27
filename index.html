@@ -551,14 +551,14 @@ const META_MES=300000, SUPER_MES=330000, ANO=2026;
 const MESES=[
   {k:'set', nome:'Setembro', abr:'Set', cor:'--c-set', dias:30, apurados:30},
   {k:'out', nome:'Outubro',  abr:'Out', cor:'--c-out', dias:31, apurados:31, corte:'31/10'},
-  {k:'nov', nome:'Novembro', abr:'Nov', cor:'--c-nov', dias:30, apurados:27, corte:'27/11'}
+  {k:'nov', nome:'Novembro', abr:'Nov', cor:'--c-nov', dias:30, apurados:30, corte:'30/11'}
 ];
 /* Cristiana reúne "Agendamento Cristiana" (setembro) e "Indicação Cristiana" (outubro em diante).
    "Indicação de paciente" = Indicação paciente CRC. semConv = fora da taxa de conversão. */
 const ORIGENS=[
-  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}, nov:{v:151988.60,q:19}}, cp:{out:40,nov:53}},
-  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9},   nov:{v:20621.38,q:5}},  cp:{out:18,nov:22}},
-  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10},  nov:{v:108488.18,q:21}}, cp:{out:34,nov:61}},
+  {k:'IMPUS',                  c:'--o-impus',     m:{set:{v:83849.96,q:14}, out:{v:101837.07,q:16}, nov:{v:154350.70,q:20}}, cp:{out:40,nov:53}},
+  {k:'Instagram orgânico',     c:'--o-org', hl:1, m:{set:{v:64483.81,q:12}, out:{v:57666.50,q:9},   nov:{v:23062.88,q:6}},  cp:{out:18,nov:22}},
+  {k:'Raphael Royal',          c:'--o-raphael',   m:{set:{v:40586.74,q:11}, out:{v:55136.42,q:10},  nov:{v:112027.98,q:22}}, cp:{out:34,nov:61}},
   {k:'Google site',            c:'--o-google',    m:{set:{v:27952.10,q:2},  out:{v:0,q:0},          nov:{v:0,q:0}},        cp:{out:5,nov:0}},
   {k:'Outros ou só subiu',     c:'--o-outros',    m:{set:{v:24059.70,q:8},  out:{v:41744.62,q:10},  nov:{v:66422.83,q:9}},  cp:{out:1,nov:1}, semConv:1},
   {k:'Indicação paciente CRC', c:'--o-crc',       m:{set:{v:21855.00,q:2},  out:{v:4928.40,q:1},    nov:{v:4219.00,q:1}},  cp:{out:6,nov:8}},
@@ -860,7 +860,7 @@ function renderTexts(){
   $('heroSub').textContent=sub;
   { const prev=MESES.slice(0,-1); let h='';
     if(prev.length){ const best=prev.reduce((a,m)=>totV(m.k)>totV(a.k)?m:a), at=totV(ATUAL.k), bv=totV(best.k);
-      if(at>bv){ h=`<div class="tr" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div><div><strong>Recorde de faturamento</strong><span>${ATUAL.nome} é o melhor mês da série: ${brl(at)}${isParc(ATUAL)?` até ${ATUAL.corte}`:''}, ${pct((at/bv-1)*100)} acima do recorde anterior (${low(best.nome)}, ${brl(bv)})${at>=SUPER_MES?', com a super meta de R$ 330 mil batida':at>=META_MES?', com a meta batida':''}.</span></div>`; } }
+      if(at>bv){ h=`<div class="tr" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div><div><strong>Recorde de faturamento</strong><span>${ATUAL.nome} ${isParc(ATUAL)?'é':'fechou como'} o melhor mês da série: ${brl(at)}${isParc(ATUAL)?` até ${ATUAL.corte}`:''}, ${pct((at/bv-1)*100)} acima do recorde anterior (${low(best.nome)}, ${brl(bv)})${at>=SUPER_MES?', com a super meta de R$ 330 mil batida':at>=META_MES?', com a meta batida':''}.</span></div>`; } }
     $('heroRec').innerHTML=h; }
   $('fatRec').textContent=SUP_ON?'tracejada dourada = meta · pontilhada creme = super meta':'linha dourada = meta';
   $('colsRec').textContent=SUP_ON?'meta e super meta':'com linha de meta';
